@@ -1,3 +1,9 @@
+import Navbar from '../src/Navbar'
+
 export default function Page() {
-  return <div />
+  return (
+    <>
+      <Navbar />
+    </>
+  )
 }
