@@ -2,8 +2,12 @@ import React from 'react'
 import cx from 'classnames'
 
 const SECTIONS = ['about', 'business', 'contact']
-
-const NavLink = ({ children, href, active }) => {
+interface NavLinkProps {
+  href: string
+  active?: boolean
+  children: React.ReactNode
+}
+const NavLink = ({ children, href, active }: NavLinkProps) => {
   return (
     <a
       href={href}
@@ -17,7 +21,10 @@ const NavLink = ({ children, href, active }) => {
   )
 }
 
-const Navbar = ({ activeSection }) => {
+interface NavbarProps {
+  activeSection: string
+}
+const Navbar = ({ activeSection }: NavbarProps) => {
   return (
     <nav className='bg-pm-dark border-gray-200 dark:bg-gray-900 dark:border-gray-700'>
       {SECTIONS.map(section => (
