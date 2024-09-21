@@ -17,8 +17,8 @@ const Banner = ({ title, image, lazyImage }: BannerProps) => {
         <ParallaxBannerLayer image={image} speed={-20} />
       </ParallaxBanner>
 
-      <div className='absolute inset-0 flex items-center justify-center backdrop-blur-sm'>
-        <h1 className='text-pm-contrast text-3xl md:text-6xl lg:text-8xl'>
+      <div className='absolute inset-0 flex items-center justify-center bg-black/20 backdrop-blur-sm'>
+        <h1 className='capitalize text-pm-contrast text-3xl font-bold md:text-6xl'>
           {title}
         </h1>
       </div>

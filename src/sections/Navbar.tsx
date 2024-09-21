@@ -15,7 +15,7 @@ const NavLink = ({ children, href, active }: NavLinkProps) => {
     <a
       href={href}
       className={cx(
-        'inline-flex p-4 border-b-4 text-pm-contrast hover:bg-pm-contrast/50 transition-colors ease-linear capitalize',
+        'inline-flex p-4 border-b-4 !text-pm-contrast hover:bg-pm-contrast/50 transition-colors ease-linear capitalize',
         active ? 'border-b-pm-light' : 'border-b-transparent'
       )}
     >
@@ -30,7 +30,7 @@ interface NavbarProps {
 const Navbar = ({ activeSection }: NavbarProps) => {
   const { t } = useTranslation()
   return (
-    <nav className='bg-pm-dark border-gray-200 dark:bg-gray-900 dark:border-gray-700'>
+    <nav className='sticky top-0 bg-pm-dark border-gray-200 dark:bg-gray-900 dark:border-gray-700 z-50'>
       {SECTIONS.map(section => (
         <NavLink
           href={`#${section}`}

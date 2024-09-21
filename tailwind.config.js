@@ -11,10 +11,21 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'pm-dark': '#161A30',
-        pm: '#31304D',
-        'pm-light': '#B6BBC4',
-        'pm-contrast': '#F0ECE5',
+        pm: {
+          dark: '#161A30',
+          DEFAULT: '#31304D',
+          light: '#B6BBC4',
+          contrast: '#F0ECE5',
+        },
+        sc: {
+          dark: '#1A374D',
+          DEFAULT: '#406882',
+          light: '#6998AB',
+        },
+      },
+      container: {
+        center: true,
+        padding: '1rem',
       },
     },
   },
