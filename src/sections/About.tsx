@@ -18,20 +18,23 @@ const AFFILIATED_COMPANIES = [
 ]
 
 const About = () => {
-  const { t } = useTranslation(['translation', 'about'])
+  const { t } = useTranslation(['about', 'translation'])
   return (
     <section>
-      <Banner title={t('about')} image='https://picsum.photos/1200/900' />
+      <Banner
+        title={t('translation:about')}
+        image='https://picsum.photos/1200/900'
+      />
       <div className='container'>
-        <Title>{t('about:代表介紹')}</Title>
+        <Title>{t('代表介紹')}</Title>
         <img
           className='mx-auto mb-8 w-[300px] aspect-[3/4] p-1 rounded ring-2 ring-gray-300 dark:ring-gray-500 md:float-left md:mr-8 md:w-[200px]'
           src='https://picsum.photos/500'
           alt='Bordered avatar'
         />
-        {t('about:代表致詞內容')}
+        {t('代表致詞內容')}
 
-        <Title>{t('about:企業關聯公司')}</Title>
+        <Title>{t('企業關聯公司')}</Title>
         <div className='grid gap-4 md:grid-cols-3'>
           {AFFILIATED_COMPANIES.map(({ name, phone, logo }) => (
             <Card
@@ -41,11 +44,11 @@ const About = () => {
                 <Icons.Briefcase className='bg-pm-light p-6 w-full h-full text-white' />
               }
             >
-              <h3 className='font-bold'>{t(`about:${name}`)}</h3>
-              <p>{t(`about:${name}地址`)}</p>
+              <h3 className='font-bold'>{t(name)}</h3>
+              <p>{t(`${name}地址`)}</p>
               {phone && (
                 <p>
-                  <a href={`tel:${phone}`}>{t(`about:${name}電話`)}</a>
+                  <a href={`tel:${phone}`}>{t(`${name}電話`)}</a>
                 </p>
               )}
             </Card>
