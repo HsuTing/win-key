@@ -18,9 +18,7 @@ const Banner = ({ title, image, lazyImage }: BannerProps) => {
       </ParallaxBanner>
 
       <div className='absolute inset-0 flex items-center justify-center bg-black/20 backdrop-blur-sm'>
-        <h1 className='capitalize text-pm-contrast text-3xl font-bold md:text-6xl'>
-          {title}
-        </h1>
+        <h1 className='capitalize text-pm-contrast font-bold'>{title}</h1>
       </div>
     </div>
   )

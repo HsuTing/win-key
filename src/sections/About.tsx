@@ -41,7 +41,7 @@ const About = () => {
                 <Icons.Briefcase className='bg-pm-light p-6 w-full h-full text-white' />
               }
             >
-              <h5 className='text-xl font-bold'>{t(`about:${name}`)}</h5>
+              <h3 className='font-bold'>{t(`about:${name}`)}</h3>
               <p>{t(`about:${name}地址`)}</p>
               {phone && (
                 <p>
