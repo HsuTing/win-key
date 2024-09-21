@@ -25,7 +25,7 @@ const About = () => {
         title={t('translation:about')}
         image='https://picsum.photos/1200/900'
       />
-      <div className='container'>
+      <div className='container pb-16'>
         <Title>{t('代表介紹')}</Title>
         <img
           className='mx-auto mb-8 w-[300px] aspect-[3/4] p-1 rounded ring-2 ring-gray-300 dark:ring-gray-500 md:float-left md:mr-8 md:w-[200px]'
