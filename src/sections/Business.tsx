@@ -17,16 +17,16 @@ const Business = () => {
       <div className='container pb-16'>
         <Title>{t('業務內容')}</Title>
         <div className='grid gap-4 md:grid-cols-4'>
-          <Card image='https://picsum.photos/500?ramdom=1'>
+          <Card image='https://picsum.photos/500?ramdom=1' isImgCovered>
             <h3 className='font-bold'>{t('貴金屬')}</h3>
           </Card>
-          <Card image='https://picsum.photos/500?ramdom=2'>
+          <Card image='https://picsum.photos/500?ramdom=2' isImgCovered>
             <h3 className='font-bold'>{t('非鐵金屬')}</h3>
           </Card>
-          <Card image='https://picsum.photos/500?ramdom=3'>
+          <Card image='https://picsum.photos/500?ramdom=3' isImgCovered>
             <h3 className='font-bold'>{t('產業廢棄物')}</h3>
           </Card>
-          <Card image='https://picsum.photos/500?ramdom=4'>
+          <Card image='https://picsum.photos/500?ramdom=4' isImgCovered>
             <h3 className='font-bold'>{t('國際貿易')}</h3>
           </Card>
         </div>
