@@ -23,7 +23,7 @@ const Footer = () => {
           <div className='grid grid-cols-[auto_1fr] gap-x-4 gap-y-1'>
             {INFO.map(({ title, info, href }) => {
               return (
-                <>
+                <React.Fragment key={title}>
                   <span className='opacity-75 font-light'>{t(title)}</span>
                   {href ? (
                     <a className='!text-inherit hover:underline' href={href}>
@@ -32,7 +32,7 @@ const Footer = () => {
                   ) : (
                     <span>{t(info)}</span>
                   )}
-                </>
+                </React.Fragment>
               )
             })}
           </div>
