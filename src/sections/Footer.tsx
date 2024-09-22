@@ -17,9 +17,7 @@ const Footer = () => {
     <footer className='py-16 bg-zinc-900 text-pm-contrast'>
       <div className='container grid md:grid-cols-2 gap-x-16 gap-y-4'>
         <div>
-          <h2 className='mb-4 font-bold uppercase'>
-            {t('translation:允基企業有限公司')}
-          </h2>
+          <h2 className='mb-4 font-bold uppercase'>{t('translation:name')}</h2>
           <div className='grid grid-cols-[auto_1fr] gap-x-4 gap-y-1'>
             {INFO.map(({ title, info, href }) => {
               return (

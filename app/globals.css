@@ -21,3 +21,28 @@ h3 {
 a {
   @apply text-sc-light hover:text-sc;
 }
+
+input {
+  @apply p-2.5 border border-pm-light/30 rounded-lg bg-pm-light/10;
+}
+
+input:focus {
+  @apply outline-2 outline-sc-light border-sc-light;
+}
+
+input[type='file'] {
+  @apply p-0 file:p-2.5 file:mr-2.5 file:border-0 file:bg-sc-dark file:text-white file:cursor-pointer;
+}
+
+input[type='file']:focus {
+  @apply outline-none border-inherit;
+}
+
+input[type='checkbox'] {
+  @apply appearance-none rounded checked:bg-sc;
+  @apply checked:bg-[url('/images/check.svg')] bg-no-repeat bg-center bg-[length:70%];
+}
+
+button {
+  @apply p-2 rounded-lg bg-sc hover:bg-sc-light text-white;
+}
