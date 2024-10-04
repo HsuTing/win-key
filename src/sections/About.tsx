@@ -40,11 +40,9 @@ const About = () => {
             <Card
               key={name}
               image={logo}
-              imgPlaceholder={
-                <Icons.Briefcase className='bg-pm-light p-6 w-full h-full text-white' />
-              }
+              imgPlaceholder={<Icons.Briefcase className='p-6' />}
+              title={t(name)}
             >
-              <h3 className='font-bold'>{t(name)}</h3>
               <p>{t(`${name}地址`)}</p>
               {phone && (
                 <p>
