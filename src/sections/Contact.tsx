@@ -1,6 +1,6 @@
 'use client'
 
-import React, { FormEvent, useId } from 'react'
+import React, { FormEvent, useId, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import Banner from '@/components/Banner'
 import Title from '@/components/Title'
@@ -12,11 +12,22 @@ import Textarea from '@/components/inputs/Textarea'
 
 const Contact = () => {
   const { t } = useTranslation(['contact', 'translation'])
+  const [status, setStatus] = useState<'idle' | 'loading' | 'done' | 'error'>(
+    'idle'
+  )
   const id = useId()
 
   async function handleSubmit(e: FormEvent) {
     e.preventDefault()
-    await sendForm(new FormData(e.target as HTMLFormElement))
+
+    setStatus('loading')
+
+    const result = await sendForm(new FormData(e.target as HTMLFormElement))
+    setStatus(result)
+
+    if (result === 'error') {
+      alert(t('表單錯誤訊息'))
+    }
   }
 
   return (
@@ -64,6 +75,19 @@ const Contact = () => {
           <button type='submit' className='btn'>
             {t('送出')}
           </button>
+
+          {status === 'loading' && (
+            <div className='absolute inset-0 flex justify-center items-center bg-white/60'>
+              <div className='loading-circle w-20 border-8' />
+            </div>
+          )}
+
+          {status === 'done' && (
+            <div className='absolute inset-0 flex flex-col justify-center items-center bg-white/60'>
+              <Icons.Check className='mb-4 w-20 text-green-600' />
+              {t('表單已成功送出')}
+            </div>
+          )}
         </form>
       </div>
     </section>

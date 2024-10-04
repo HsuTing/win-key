@@ -48,3 +48,9 @@ input[type='checkbox'] {
 button {
   @apply p-2 rounded-lg bg-sc hover:bg-sc-light text-white;
 }
+
+@layer components {
+  .loading-circle {
+    @apply animate-spin inline-block aspect-square border-2 border-solid rounded-full border-pm-light border-l-pm;
+  }
+}

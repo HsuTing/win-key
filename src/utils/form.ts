@@ -7,8 +7,8 @@ const FIELDS = {
   content: 'entry.1308299496',
 } as Record<string, string>
 
-export async function sendForm(data: FormData): Promise<'success' | 'error'> {
-  const query = (Array.from(data.entries()) as Array<[string, string | number]>)
+export async function sendForm(data: FormData): Promise<'done' | 'error'> {
+  const body = (Array.from(data.entries()) as Array<[string, string | number]>)
     .flatMap(
       ([name, value]) => `${FIELDS[name] ?? name}=${encodeURIComponent(value)}`
     )
@@ -16,17 +16,18 @@ export async function sendForm(data: FormData): Promise<'success' | 'error'> {
 
   try {
     return await fetch(
-      `https://docs.google.com/forms/d/e/${FORM_ID}/formResponse?${query}`,
+      `https://docs.google.com/forms/d/e/${FORM_ID}/formResponse`,
       {
         method: 'POST',
         mode: 'no-cors',
         headers: new Headers({
           'Content-Type': 'application/x-www-form-urlencoded',
         }),
+        body,
       }
-    ).then(res => 'success')
+    ).then(res => 'done')
   } catch (e) {
-    console.warn(e)
+    console.error(e)
     return 'error'
   }
 }
