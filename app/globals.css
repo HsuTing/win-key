@@ -22,11 +22,13 @@ a {
   @apply text-sc-light hover:text-sc;
 }
 
-input {
+input,
+textarea {
   @apply p-2.5 border border-pm-light/30 rounded-lg bg-pm-light/10;
 }
 
-input:focus {
+input:focus,
+textarea:focus {
   @apply outline-2 outline-sc-light border-sc-light;
 }
 
