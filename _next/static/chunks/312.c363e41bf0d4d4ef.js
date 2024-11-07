@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[312],{3312:function(e){e.exports=JSON.parse('{"創立時間":"創立時間","負責人":"負責人","莊百慶":"莊百慶"}')}}]);
