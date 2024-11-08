@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "build": "next build && touch ./out/.nojekyll",
+    "build": "next build && touch ./out/.nojekyll && touch out/CNAME && echo \"www.win-key.co\" >> out/CNAME",
     "dev": "next dev",
     "start": "next start",
     "lint": "next lint",
