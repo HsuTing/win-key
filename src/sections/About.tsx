@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react'
-import { useTranslation } from 'react-i18next'
+import { useTranslation } from 'next-i18next'
 import Banner from '@/components/Banner'
 import Title from '@/components/Title'
 import Card from '@/components/Card'

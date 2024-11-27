@@ -1,5 +1,4 @@
 'use client'
-
 import { ParallaxProvider } from 'react-scroll-parallax'
 import i18n from 'i18next'
 import LanguageDetector from 'i18next-browser-languagedetector'
@@ -15,8 +14,10 @@ i18n
   .use(LanguageDetector)
   .use(initReactI18next)
   .init({
+    lng: undefined,
     fallbackLng: 'en',
     preload: typeof window === 'undefined' ? ['en', 'zh-TW', 'ja'] : [],
+    detection: { order: ['path', 'navigator'], lookupFromPathIndex: 0 },
   })
 
 export function Providers({ children }) {
