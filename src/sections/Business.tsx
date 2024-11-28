@@ -6,12 +6,13 @@ import { Element } from 'react-scroll'
 import Banner from '@/components/Banner'
 import Title from '@/components/Title'
 import Card from '@/components/Card'
+import Image from 'next/image'
 
 const BUSINESSES = [
-  { name: '貴金屬', img: 'https://picsum.photos/500?ramdom=1' },
-  { name: '非鐵金屬', img: 'https://picsum.photos/500?ramdom=2' },
-  { name: '產業廢棄物', img: 'https://picsum.photos/500?ramdom=3' },
-  { name: '國際貿易', img: 'https://picsum.photos/500?ramdom=4' },
+  { name: '金屬', img: '' },
+  { name: '塑膠', img: '' },
+  { name: '一般、有害事業廢棄物', img: '' },
+  { name: '國際貿易', img: '' },
 ]
 
 const Business = () => {
@@ -32,10 +33,29 @@ const Business = () => {
               title={t(name)}
               image={img}
               isImgCovered
-            />
+            >
+              <p className='whitespace-pre-line text-left'>
+                {t(`${name}內容`)}
+              </p>
+            </Card>
           ))}
         </div>
-        <Title>SDGs</Title>
+        <Title>{t('永續發展目標 SDGs')}</Title>
+        <img src='/images/business/SDGs_and_TWLogo.png' alt='sdgs' />
+        <p className='my-8 whitespace-pre-line'>
+          {t('永續發展目標 SDGs 內容')}
+        </p>
+        <div className='grid grid-cols-2 md:grid-cols-4'>
+          <img src='/images/business/sdg06.svg' alt='sdg' />
+          <img src='/images/business/sdg07.svg' alt='sdg' />
+          <img src='/images/business/sdg08.svg' alt='sdg' />
+          <img src='/images/business/sdg09.svg' alt='sdg' />
+          <img src='/images/business/sdg11.svg' alt='sdg' />
+          <img src='/images/business/sdg12.svg' alt='sdg' />
+          <img src='/images/business/sdg13.svg' alt='sdg' />
+          <img src='/images/business/sdg17.svg' alt='sdg' />
+        </div>
+
         <Title>{t('營業執照')}</Title>
       </div>
     </Element>

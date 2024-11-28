@@ -46,7 +46,7 @@ input[type='checkbox'] {
 }
 
 button {
-  @apply p-2 rounded-lg bg-sc hover:bg-sc-light text-white;
+  @apply p-2 rounded-lg bg-pm hover:bg-pm-light text-white;
 }
 
 @layer components {

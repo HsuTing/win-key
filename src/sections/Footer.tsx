@@ -4,18 +4,23 @@ import React from 'react'
 import { useTranslation } from 'next-i18next'
 
 const INFO = [
-  { title: '創立時間', info: '1997 / 11 / 21' },
+  { title: '創立時間', info: '1995' },
   { title: '負責人', info: '莊百慶' },
-  { title: 'TEL', info: '+886 4 9251 0477', href: 'tel:+8860492510477' },
-  { title: 'FAX', info: '' },
-  { title: 'Email', info: '' },
+  { title: 'TEL', info: 'translation:phone', href: 'tel:0492522313' },
+  { title: 'FAX', info: '049-2510477', href: 'fax:049-2510477' },
+  {
+    title: 'Email',
+    info: 'winsingjp@gmail.com',
+    href: 'mailto:winsingjp@gmail.com',
+  },
+  { title: '統一編號', info: '016273391' },
 ]
 
 const Footer = () => {
   const { t } = useTranslation(['footer', 'translation'])
   return (
-    <footer className='py-16 bg-zinc-900 text-pm-contrast'>
-      <div className='container grid md:grid-cols-2 gap-x-16 gap-y-4'>
+    <footer className='bg-zinc-900 text-pm-contrast'>
+      <div className='container py-16 grid md:grid-cols-2 gap-x-16 gap-y-4'>
         <div>
           <h2 className='mb-4 font-bold uppercase'>{t('translation:name')}</h2>
           <div className='grid grid-cols-[auto_1fr] gap-x-4 gap-y-1'>
@@ -44,6 +49,9 @@ const Footer = () => {
           loading='lazy'
           referrerPolicy='no-referrer-when-downgrade'
         />
+      </div>
+      <div className='py-8 bg-pm text-center'>
+        ©WIN KEY RECYCLE INDUSTRIAL Co., Ltd. All rights reserved.
       </div>
     </footer>
   )

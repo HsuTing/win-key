@@ -13,7 +13,7 @@ const Textarea = ({ name, label, required, placeholder }: TextareaProps) => {
     <div>
       <Lable htmlFor={id}>
         {label}
-        {required && '*'}
+        {required && <span className='text-red-500'>*</span>}
       </Lable>
       <textarea
         id={id}

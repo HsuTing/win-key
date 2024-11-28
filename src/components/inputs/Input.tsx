@@ -15,7 +15,7 @@ const Input = ({ type, name, label, required, placeholder }: InputProps) => {
     <div>
       <Lable htmlFor={id}>
         {label}
-        {required && '*'}
+        {required && <span className='text-red-500'>*</span>}
       </Lable>
       {type === 'file' ? (
         <input

@@ -42,12 +42,13 @@ const Contact = () => {
       >
         <div className='flex flex-col gap-2 flex-1'>
           {t('引言')}
-          <a href='tel:+8860492510477' className='flex'>
+          <a href='tel:+0492522313' className='inline-flex'>
             <Icons.Phone className='mr-2 aspect-square w-4' />
             {t('translation:phone')}
           </a>
-          <a href='mailto:'>
+          <a href='mailto:winsingjp@gmail.com' className='inline-flex'>
             <Icons.Mail className='mr-2 aspect-square w-4' />
+            winsingjp@gmail.com
           </a>
         </div>
         <hr className='w-48 h-1 mx-auto bg-gray-100 border-0 rounded lg:w-1 lg:h-auto' />
