@@ -1,7 +1,8 @@
 'use client'
 
 import React from 'react'
-import { useTranslation } from 'react-i18next'
+import { useTranslation } from 'next-i18next'
+import { Element } from 'react-scroll'
 import Banner from '@/components/Banner'
 import Title from '@/components/Title'
 import Card from '@/components/Card'
@@ -16,7 +17,7 @@ const BUSINESSES = [
 const Business = () => {
   const { t } = useTranslation(['business', 'translation'])
   return (
-    <section>
+    <Element name='business'>
       <Banner
         title={t('translation:business')}
         image='https://picsum.photos/1200/900'
@@ -37,7 +38,7 @@ const Business = () => {
         <Title>SDGs</Title>
         <Title>{t('營業執照')}</Title>
       </div>
-    </section>
+    </Element>
   )
 }
 

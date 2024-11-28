@@ -3,26 +3,9 @@
 import React from 'react'
 import { useTranslation } from 'next-i18next'
 import cx from 'classnames'
+import { Link } from 'react-scroll'
 
 const SECTIONS = ['about', 'business', 'contact']
-interface NavLinkProps {
-  href: string
-  active?: boolean
-  children: React.ReactNode
-}
-const NavLink = ({ children, href, active }: NavLinkProps) => {
-  return (
-    <a
-      href={href}
-      className={cx(
-        'inline-flex p-4 border-b-4 !text-pm-contrast hover:bg-pm-contrast/50 transition-colors ease-linear capitalize',
-        active ? 'border-b-pm-light' : 'border-b-transparent'
-      )}
-    >
-      {children}
-    </a>
-  )
-}
 
 interface NavbarProps {
   activeSection: string
@@ -32,13 +15,18 @@ const Navbar = ({ activeSection }: NavbarProps) => {
   return (
     <nav className='sticky top-0 bg-pm-dark border-gray-200 dark:bg-gray-900 dark:border-gray-700 z-50'>
       {SECTIONS.map(section => (
-        <NavLink
-          href={`#${section}`}
-          active={activeSection === section}
+        <Link
+          to={section}
+          spy={true}
+          smooth={true}
+          offset={-60}
+          duration={500}
+          className='inline-flex p-4 border-b-4 border-b-transparent !text-pm-contrast hover:bg-pm-contrast/50 transition-colors ease-linear capitalize cursor-pointer'
+          activeClass='!border-b-pm-light'
           key={section}
         >
           {t(section)}
-        </NavLink>
+        </Link>
       ))}
     </nav>
   )

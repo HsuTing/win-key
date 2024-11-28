@@ -1,7 +1,7 @@
 'use client'
-
 import React, { FormEvent, useId, useState } from 'react'
 import { useTranslation } from 'next-i18next'
+import { Element } from 'react-scroll'
 import Banner from '@/components/Banner'
 import Title from '@/components/Title'
 import Card from '@/components/Card'
@@ -31,7 +31,7 @@ const Contact = () => {
   }
 
   return (
-    <section>
+    <Element name='contact'>
       <Banner
         title={t('translation:contact')}
         image='https://picsum.photos/1200/900'
@@ -90,7 +90,7 @@ const Contact = () => {
           )}
         </form>
       </div>
-    </section>
+    </Element>
   )
 }
 

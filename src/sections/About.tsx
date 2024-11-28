@@ -1,7 +1,8 @@
 'use client'
-
 import React from 'react'
+import Image from 'next/image'
 import { useTranslation } from 'next-i18next'
+import { Element } from 'react-scroll'
 import Banner from '@/components/Banner'
 import Title from '@/components/Title'
 import Card from '@/components/Card'
@@ -20,7 +21,7 @@ const AFFILIATED_COMPANIES = [
 const About = () => {
   const { t } = useTranslation(['about', 'translation'])
   return (
-    <section>
+    <Element name='about'>
       <Banner
         title={t('translation:about')}
         image='https://picsum.photos/1200/900'
@@ -53,7 +54,7 @@ const About = () => {
           ))}
         </div>
       </div>
-    </section>
+    </Element>
   )
 }
 
