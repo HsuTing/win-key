@@ -17,7 +17,10 @@ const Home = () => {
         </ParallaxBanner>
 
         <div className='absolute inset-0 flex items-center justify-center bg-black/20 backdrop-blur-sm'>
-          <h1 className='capitalize text-pm-contrast font-bold'>{t('name')}</h1>
+          <div className='container p-8 bg-pm-contrast/60 text-center text-pm-dark md:max-w-5/6 rounded'>
+            <h1 className='mb-6 capitalize text-6xl font-bold'>{t('name')}</h1>
+            <p>{t('description')}</p>
+          </div>
         </div>
       </div>
     </Element>
