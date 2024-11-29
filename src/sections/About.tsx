@@ -11,7 +11,7 @@ import Icons from '@/components/Icons'
 const AFFILIATED_COMPANIES = [
   {
     name: '允貿環保科技有限公司',
-    logo: 'https://cloud.tipo.gov.tw/S282/pic/20160227/070/010/008/pic_070010008_20110105_1.jpg',
+    logo: '',
     phone: '049-2260388',
     fax: '049-2260398',
     vat: '90151719',
