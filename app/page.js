@@ -3,6 +3,8 @@ import About from '@/sections/About'
 import Business from '@/sections/Business'
 import Contact from '@/sections/Contact'
 import Footer from '@/sections/Footer'
+import Home from '@/sections/Home'
+import BackToTop from '@/components/BackToTop'
 
 export async function generateMetadata({ params }) {
   const TITLE = {
@@ -22,9 +24,11 @@ export default function Page() {
   return (
     <>
       <Navbar />
+      <Home />
       <About />
       <Business />
       <Contact />
+      <BackToTop className='fixed bottom-4 right-4' />
       <Footer />
     </>
   )
