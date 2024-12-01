@@ -1,10 +1,10 @@
 const FORM_ID = '1FAIpQLSeCHXRpYTC4hatUyFJWsZl_klLDTXECcSkw7k7uME1-hyF-qg'
 const FIELDS = {
-  name: 'entry.595134308',
-  company: 'entry.1102963244',
-  email: 'entry.524960285',
-  tel: 'entry.453187392',
-  content: 'entry.1308299496',
+  name: 'entry.1933057890',
+  company: 'entry.639469539',
+  email: 'entry.1574557020',
+  tel: 'entry.1578762008',
+  content: 'entry.473236620',
 } as Record<string, string>
 
 export async function sendForm(data: FormData): Promise<'done' | 'error'> {
