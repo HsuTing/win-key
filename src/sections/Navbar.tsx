@@ -8,15 +8,11 @@ import { Link } from 'react-scroll'
 import Image from 'next/image'
 import Icons from '@/components/Icons'
 
-const SECTIONS = ['about', 'business', 'contact']
-
-interface NavbarProps {
-  activeSection: string
-}
-const Navbar = ({ activeSection }: NavbarProps) => {
+const Navbar = () => {
   const { t } = useTranslation()
   const router = useRouter()
 
+  const SECTIONS = ['about', 'business', 'contact']
   const LANGUAGE = [
     {
       title: 'English',
@@ -63,11 +59,7 @@ const Navbar = ({ activeSection }: NavbarProps) => {
         </Link>
       ))}
       <div className='grow' />
-      <a
-        className='group relative p-4 w-16 h-16'
-        href='#'
-        onClick={e => e.preventDefault()}
-      >
+      <button className='group relative p-4 w-16 h-16 !bg-transparent'>
         <Icons.Globe className='text-pm-contrast cursor-pointer' />
         <div className='hidden group-focus-within:block absolute right-0 my-4 w-44 overflow-hidden bg-white z-10 divide-y divide-gray-100 rounded shadow'>
           {LANGUAGE.map(({ title, code }) => (
@@ -87,7 +79,7 @@ const Navbar = ({ activeSection }: NavbarProps) => {
             </a>
           ))}
         </div>
-      </a>
+      </button>
     </nav>
   )
 }
