@@ -5,4 +5,5 @@ const isProd = process.env.NODE_ENV === 'production'
 module.exports = {
   // i18n,
   output: 'export',
+  images: { unoptimized: true },
 }
