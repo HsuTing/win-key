@@ -2,7 +2,7 @@
 import React from 'react'
 import { Element } from 'react-scroll'
 import { ParallaxBanner, ParallaxBannerLayer } from 'react-scroll-parallax'
-import { useTranslation } from 'next-i18next'
+import { useTranslation } from 'react-i18next'
 
 const Home = () => {
   const { t } = useTranslation()

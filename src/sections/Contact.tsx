@@ -1,6 +1,6 @@
 'use client'
 import React, { FormEvent, useId, useState } from 'react'
-import { useTranslation } from 'next-i18next'
+import { useTranslation } from 'react-i18next'
 import { Element } from 'react-scroll'
 import Banner from '@/components/Banner'
 import Title from '@/components/Title'
