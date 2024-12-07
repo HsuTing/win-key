@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[296],{1296:function(n){n.exports=JSON.parse('{"about":"about","business":"business","contact":"contact","name":"win key recycle industrial corp.","address":"No. 205, Sec. 2, Fencao Rd., Fenyuan Vil., Fenyuan Township, Changhua County 502001, Taiwan (R.O.C.)","phone":"+886 4 9251 0477"}')}}]);

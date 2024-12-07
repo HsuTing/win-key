@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[393],{2393:function(s){s.exports=JSON.parse('{"about":"企業情報","business":"事業介紹","contact":"聯絡我們","name":"允基企業有限公司","address":"彰化縣芬園鄉芬園村芬草路二段205號","phone":"049-2522313"}')}}]);
