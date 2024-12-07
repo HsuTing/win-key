@@ -1,5 +1,5 @@
 'use client'
-import React, { useEffect } from 'react'
+import React from 'react'
 import cx from 'classnames'
 import { Button } from 'react-scroll'
 import Icons from './Icons'
@@ -18,7 +18,7 @@ const BackToTop = ({ className }: BackToTopProps) => {
       to='home'
       spy
       smooth
-      offset={-window.innerHeight}
+      offset={typeof window !== 'undefined' ? -window.innerHeight : 0}
     >
       <Icons.Up className='w-8' />
       ᴛᴏᴘ

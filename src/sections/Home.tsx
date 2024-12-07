@@ -10,10 +10,7 @@ const Home = () => {
     <Element name='home'>
       <div className='relative bg-pm'>
         <ParallaxBanner className='w-screen h-screen'>
-          <ParallaxBannerLayer
-            image='https://picsum.photos/1200/900?random=1'
-            speed={-20}
-          />
+          <ParallaxBannerLayer image='/images/home/IMG_4380.jpg' speed={-20} />
         </ParallaxBanner>
 
         <div className='absolute inset-0 flex items-center justify-center bg-black/20 backdrop-blur-sm'>

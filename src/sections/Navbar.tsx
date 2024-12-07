@@ -1,6 +1,5 @@
 'use client'
 import React from 'react'
-import { useRouter } from 'next/navigation'
 import i18n from 'i18next'
 import { useTranslation } from 'react-i18next'
 import cx from 'classnames'
@@ -10,7 +9,6 @@ import Icons from '@/components/Icons'
 
 const Navbar = () => {
   const { t } = useTranslation()
-  const router = useRouter()
 
   const SECTIONS = ['about', 'business', 'contact']
   const LANGUAGE = [
