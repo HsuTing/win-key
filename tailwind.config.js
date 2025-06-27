@@ -19,7 +19,7 @@ module.exports = {
     extend: {
       colors: {
         pm: {
-          dark: '#161A30',
+          dark: '#005e9e',
           DEFAULT: '#31304D',
           light: '#B6BBC4',
           contrast: '#F0ECE5',

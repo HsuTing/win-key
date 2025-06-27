@@ -6,6 +6,7 @@ import cx from 'classnames'
 import { Link } from 'react-scroll'
 import Image from 'next/image'
 import Icons from '@/components/Icons'
+import logo from '@/images/logo.jpg'
 
 const Navbar = () => {
   const { t } = useTranslation()
@@ -32,32 +33,46 @@ const Navbar = () => {
   }
 
   return (
-    <nav className='sticky top-0 flex bg-pm-dark border-gray-200 z-50 drop-shadow-lg'>
+    <nav className='sticky top-0 bg-pm-dark border-gray-200 z-50 drop-shadow-lg'>
+      <div className='flex max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
       <Link
-        className='relative w-16 h-16 cursor-pointer'
+        className='relative w-20 h-20 cursor-pointer'
         to='home'
         smooth={true}
-        offset={-60}
+        offset={-80}
         duration={500}
       >
-        <Image src='/images/logo.jpg' alt='logo' fill />
+        <Image src={logo} alt='logo' fill />
       </Link>
+
+      <Link
+        className='inline-flex items-start flex-col justify-center ursor-pointer ml-4'
+        to='home'
+        smooth={true}
+        offset={-80}
+        duration={500}
+      >
+        <span className="text-3xl font-bold text-white hover:text-white/90 transition-colors">允基企業有限公司</span>
+        <span className="text-sm text-white/80 font-medium">Win Key Recycle Industry LLC</span>
+      </Link>
+
+      <div className='grow' />
 
       {SECTIONS.map(section => (
         <Link
           to={section}
           spy
           smooth
-          offset={-60}
-          className='inline-flex p-4 border-b-4 border-b-transparent !text-pm-contrast hover:bg-pm-contrast/50 transition-colors ease-linear capitalize cursor-pointer'
+          offset={-80}
+          className='inline-flex p-4 content-center flex-wrap border-b-4 border-b-transparent !text-pm-contrast hover:bg-pm-contrast/50 transition-colors ease-linear capitalize cursor-pointer'
           activeClass='!border-b-pm-light'
           key={section}
         >
           {t(section)}
         </Link>
       ))}
-      <div className='grow' />
-      <button className='group relative p-4 w-16 h-16 !bg-transparent'>
+
+      <button className='group relative p-4 w-16 h-20 !bg-transparent'>
         <Icons.Globe className='text-pm-contrast cursor-pointer' />
         <div className='hidden group-focus-within:block absolute right-0 my-4 w-44 overflow-hidden bg-white z-10 divide-y divide-gray-100 rounded shadow'>
           {LANGUAGE.map(({ title, code }) => (
@@ -78,6 +93,7 @@ const Navbar = () => {
           ))}
         </div>
       </button>
+      </div>
     </nav>
   )
 }
