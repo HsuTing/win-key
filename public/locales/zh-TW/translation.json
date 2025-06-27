@@ -1,8 +1,12 @@
 {
-  "about": "企業情報",
+  "company-info": "企業情報",
+  "ceo-message": "代表致詞",
+  "company-profile": "公司簡介",
+  "history": "歷史沿革",
+  "affiliates": "集團關聯公司",
   "business": "事業介紹",
-  "contact": "聯絡我們",
-  "name": "允基企業有限公司",
-  "address": "彰化縣芬園鄉芬園村芬草路二段205號",
-  "phone": "049-2522313"
+  "business-content": "業務內容",
+  "sdgs": "SDGs",
+  "license": "營業執照",
+  "contact": "聯絡我們"
 }

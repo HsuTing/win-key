@@ -1,5 +1,12 @@
 {
-  "about": "about",
-  "business": "business",
-  "contact": "contact"
+  "company-info": "企業情報",
+  "ceo-nessage": "代表挨拶",
+  "company-profile": "会社概要",
+  "history": "沿革",
+  "affiliates": "グループ関連会社",
+  "business": "事業紹介",
+  "business-content": "事業内容",
+  "sdgs": "SDGs",
+  "license": "営業許可",
+  "contact": "お問い合わせ"
 }
