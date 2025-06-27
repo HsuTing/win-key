@@ -7,6 +7,12 @@ const Briefcase = ({ className }: { className?: string }) => {
   )
 }
 
+const ArrowRight = ({ className }: { className?: string }) => {
+  return (
+    <svg className={className} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+  )
+}
+
 const Phone = ({ className }: { className?: string }) => {
   return (
     <svg
@@ -81,6 +87,18 @@ const ChevronDown = ({ className }: { className?: string }) => {
   )
 }
 
+const ChevronLeft = ({ className }: { className?: string }) => {
+  return (
+    <svg className={className} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"></path></svg>
+  )
+}
+
+const ChevronRight = ({ className }: { className?: string }) => {
+  return (
+    <svg className={className} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"></path></svg>
+  )
+}
+
 const Users = ({ className }: { className?: string }) => {
   return (
     <svg className={className} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
@@ -119,12 +137,15 @@ const Certificate = ({ className }: { className?: string }) => {
 
 export default {
   Briefcase: React.memo(Briefcase),
+  ArrowRight: React.memo(ArrowRight),
   Phone: React.memo(Phone),
   Mail: React.memo(Mail),
   Check: React.memo(Check),
   Up: React.memo(Up),
   Globe: React.memo(Globe),
   ChevronDown: React.memo(ChevronDown),
+  ChevronRight: React.memo(ChevronRight),
+  ChevronLeft: React.memo(ChevronLeft),
   Users: React.memo(Users),
   Building: React.memo(Building),
   History: React.memo(History),
