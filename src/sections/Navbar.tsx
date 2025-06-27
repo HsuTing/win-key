@@ -8,6 +8,16 @@ import Image from 'next/image'
 import Icons from '@/components/Icons'
 import logo from '@/images/logo.jpg'
 
+const icons = {
+  'ceo-message': Icons.Users,
+  'company-profile': Icons.Building,
+  history: Icons.History,
+  affiliates: Icons.Network,
+  'business-content': Icons.Briefcase,
+  sdgs: Icons.Leaf,
+  license: Icons.Certificate,
+}
+
 const Navbar = () => {
   const { t } = useTranslation()
 
@@ -81,6 +91,7 @@ const Navbar = () => {
           }}
           onMouseLeave={() => {
             if (!items) return
+
             clearTimeout(timeoutRef.current)
             timeoutRef.current = setTimeout(setSecionOption, 300, null)
           }}
@@ -101,19 +112,25 @@ const Navbar = () => {
                 timeoutRef.current = setTimeout(setSecionOption, 300, null)
               }}
             >
-              {items?.map(item => (
-                <Link
-                  key={item}
-                  className="flex items-center space-x-3 px-4 py-2 text-gray-700 hover:bg-[#005e9e]/10 transition-colors"
-                  to={item}
-                  smooth={true}
-                  offset={-80}
-                  duration={500}
-                  onClick={() => setSecionOption(null)}
-                >
-                  {t(item)}
-                </Link>
-              ))}
+              {items?.map(item => {
+                const Icon = icons[item]
+
+                return (
+                  <Link
+                    key={item}
+                    className="flex items-center space-x-3 px-4 py-2 text-gray-700 hover:bg-[#005e9e]/10 transition-colors"
+                    to={item}
+                    smooth={true}
+                    offset={-80}
+                    duration={500}
+                    onClick={() => setSecionOption(null)}
+                  >
+                    <Icon className="w-4 h-4 text-[#005e9e]" />
+
+                    <span>{t(item)}</span>
+                  </Link>
+                )
+              })}
             </div>
           )}
         </div>
