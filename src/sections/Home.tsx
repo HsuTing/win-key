@@ -3,29 +3,15 @@ import React, { useEffect, useState } from "react";
 import { Element } from "react-scroll";
 import { useTranslation } from "react-i18next";
 import Icons from "@/components/Icons";
+import Image from "next/image";
 
 const Home = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation(["home"]);
   const [currentSlide, setCurrentSlide] = useState(0);
   const slides = [
-    {
-      image:
-        "https://images.pexels.com/photos/162568/factory-steel-mill-industry-162568.jpeg",
-      title: "專業工廠設備",
-      description: "現代化的金屬加工設備與技術",
-    },
-    {
-      image:
-        "https://images.pexels.com/photos/1108572/pexels-photo-1108572.jpeg",
-      title: "環保處理流程",
-      description: "符合國際標準的環保處理技術",
-    },
-    {
-      image:
-        "https://images.pexels.com/photos/1108101/pexels-photo-1108101.jpeg",
-      title: "循環經濟實踐",
-      description: "推動永續發展的循環經濟模式",
-    },
+    "https://images.pexels.com/photos/1108572/pexels-photo-1108572.jpeg",
+    "https://images.pexels.com/photos/1108572/pexels-photo-1108572.jpeg",
+    "https://images.pexels.com/photos/1108101/pexels-photo-1108101.jpeg",
   ];
 
   // 自動輪播
@@ -64,24 +50,24 @@ const Home = () => {
             <div>
               {/* 主標語 - 左對齊 */}
               <h2 className="text-4xl lg:text-5xl font-bold mb-8 leading-tight text-left">
-                {t("hero.title")}
+                {t("title")}
               </h2>
 
               {/* 公司介紹 - 左對齊 */}
               <div className="max-w-3xl mb-12">
                 <p className="text-lg lg:text-xl text-gray-200 leading-relaxed text-left">
-                  {t("hero.subtitle")}
+                  {t("subtitle")}
                 </p>
               </div>
 
               {/* 按鈕組 */}
               <div className="flex flex-col sm:flex-row gap-4">
                 <button className="bg-[#005e9e] hover:bg-[#004a7f] text-white px-8 py-4 rounded-lg font-semibold transition-colors flex items-center justify-center space-x-2">
-                  <span>{t("hero.cta")}</span>
+                  <span>{t("cta")}</span>
                   <Icons.ArrowRight className="w-5 h-5" />
                 </button>
-                <button className="border-2 border-white/30 hover:border-white text-white px-8 py-4 rounded-lg font-semibold transition-colors backdrop-blur-sm">
-                  {t("hero.learnMore")}
+                <button className="border-2 border-white/30 hover:border-white text-white px-8 py-4 rounded-lg font-semibold transition-colors backdrop-blur-sm bg-transparent">
+                  {t("learnMore")}
                 </button>
               </div>
             </div>
@@ -108,10 +94,11 @@ const Home = () => {
                     <div className="relative w-full h-full">
                       {/* 照片 */}
                       <div className="absolute inset-0">
-                        <img
-                          src={slides[currentSlide].image}
-                          alt={slides[currentSlide].title}
+                        <Image
+                          src={slides[currentSlide]}
+                          alt={t(`slide.${currentSlide}.title`)}
                           className="w-full h-full object-cover transition-opacity duration-500"
+                          fill
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
                       </div>
@@ -152,10 +139,10 @@ const Home = () => {
                 {/* 照片描述 - 置於容器外部下方，對齊「了解更多」按鈕下緣 */}
                 <div className="mt-4 text-center">
                   <h4 className="text-lg font-semibold text-white mb-2">
-                    {slides[currentSlide].title}
+                    {t(`slides.${currentSlide}.title`)}
                   </h4>
                   <p className="text-gray-300 text-sm">
-                    {slides[currentSlide].description}
+                    {t(`slides.${currentSlide}.description`)}
                   </p>
                 </div>
               </div>

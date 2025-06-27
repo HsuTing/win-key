@@ -58,7 +58,7 @@ const Navbar = () => {
   const timeoutRef = useRef<ReturnType<typeof setTimeout>>();
 
   return (
-    <nav className="sticky top-0 bg-pm-dark border-gray-200 z-50 drop-shadow-lg">
+    <nav className="fixed top-0 left-0 right-0 bg-pm-dark border-gray-200 z-50 drop-shadow-lg">
       <div className="flex max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <Link
           className="relative w-20 h-20 cursor-pointer"
