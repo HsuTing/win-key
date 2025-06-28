@@ -22,17 +22,21 @@ const AFFILIATED_COMPANIES = [
   { name: "允興(泰國)股份有限公司" },
 ];
 
+const CONTACTS = [Icons.Phone, Icons.Phone, Icons.Mail];
+
 const About = () => {
   const { t } = useTranslation(["about", "translation"]);
+
   return (
     <>
       <Banner
         title={t("translation:about")}
         image="https://picsum.photos/1200/900"
       />
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Element name="ceo-message">
+
+      <Element name="ceo-message">
+        <section className="py-20 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <Title>{t("translation:ceo-message")}</Title>
 
             <div className="grid lg:grid-cols-5 gap-16 items-center">
@@ -85,53 +89,152 @@ const About = () => {
                 </div>
               </div>
             </div>
-          </Element>
-
-          <Element name="company-profile">
-            <Title>{t("translation:company-profile")}</Title>
-          </Element>
-
-          <Element name="history">
-            <Title>{t("translation:history")}</Title>
-            <p className="whitespace-pre-line">{t("歷史沿革內容")}</p>
-          </Element>
-
-          <Element name="affiliates">
-            <Title>{t("translation:affiliates")}</Title>
-            <div className="grid gap-4 md:grid-cols-3">
-              {AFFILIATED_COMPANIES.map(({ name, logo, phone, fax, vat }) => (
-                <Card
-                  key={name}
-                  image={logo}
-                  imgPlaceholder={<Icons.Briefcase className="p-6" />}
-                  title={t(name)}
-                >
-                  <p>{t(`${name}地址`)}</p>
-                  {phone && (
-                    <p>
-                      TEL <a href={`tel:${phone}`}>{t(`${name}電話`)}</a>
-                    </p>
-                  )}
-                  {fax && (
-                    <p>
-                      FAX <a href={`fax:${fax}`}>{t(`${name}傳真`)}</a>
-                    </p>
-                  )}
-                  {vat && (
-                    <p>
-                      {t("統一編號")} {vat}
-                    </p>
-                  )}
-                </Card>
-              ))}
-            </div>
-          </Element>
-        </div>
-      </section>
-
-      {/*
           </div>
-          */}
+        </section>
+      </Element>
+
+      <Element name="company-profile">
+        <section className="py-20 bg-gray-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <Title>{t("translation:company-profile")}</Title>
+
+            <div className="max-w-5xl mx-auto">
+              <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+                <div className="overflow-x-auto">
+                  <table className="w-full">
+                    <tbody className="divide-y divide-gray-200">
+                      <tr className="hover:bg-gray-50 transition-colors">
+                        <td className="px-6 py-4 whitespace-nowrap font-semibold text-gray-900 bg-gray-50 w-32">
+                          {t("companyProfile.companyInfoTitle.name")}
+                        </td>
+                        <td className="px-6 py-4 text-gray-700">
+                          {t("companyProfile.companyInfo.name")}
+                        </td>
+                      </tr>
+                      <tr className="hover:bg-gray-50 transition-colors">
+                        <td className="px-6 py-4 whitespace-nowrap font-semibold text-gray-900 bg-gray-50">
+                          {t("companyProfile.companyInfoTitle.established")}
+                        </td>
+                        <td className="px-6 py-4 text-gray-700">
+                          {t("companyProfile.companyInfo.established")}
+                        </td>
+                      </tr>
+                      <tr className="hover:bg-gray-50 transition-colors">
+                        <td className="px-6 py-4 whitespace-nowrap font-semibold text-gray-900 bg-gray-50">
+                          {t("companyProfile.companyInfoTitle.address")}
+                        </td>
+                        <td className="px-6 py-4 text-gray-700">
+                          {t("companyProfile.companyInfo.address")}
+                        </td>
+                      </tr>
+                      <tr className="hover:bg-gray-50 transition-colors">
+                        <td className="px-6 py-4 whitespace-nowrap font-semibold text-gray-900 bg-gray-50">
+                          {t("companyProfile.companyInfoTitle.representative")}
+                        </td>
+                        <td className="px-6 py-4 text-gray-700">
+                          {t("companyProfile.companyInfo.representative")}
+                        </td>
+                      </tr>
+                      <tr className="hover:bg-gray-50 transition-colors">
+                        <td className="px-6 py-4 whitespace-nowrap font-semibold text-gray-900 bg-gray-50 align-top">
+                          {t("companyProfile.companyInfoTitle.business")}
+                        </td>
+                        <td className="px-6 py-4 text-gray-700">
+                          <div className="space-y-1">
+                            {Array.from({ length: 4 }).map((_, index) => (
+                              <div
+                                key={index}
+                                className="flex items-center space-x-2"
+                              >
+                                <Icons.CheckCircle className="w-4 h-4 text-[#005e9e] flex-shrink-0" />
+                                <span>
+                                  {t(
+                                    `companyProfile.companyInfo.business.${index}`,
+                                  )}
+                                </span>
+                              </div>
+                            ))}
+                          </div>
+                        </td>
+                      </tr>
+                      <tr className="hover:bg-gray-50 transition-colors">
+                        <td className="px-6 py-4 whitespace-nowrap font-semibold text-gray-900 bg-gray-50 align-top">
+                          {t("companyProfile.companyInfoTitle.contact")}
+                        </td>
+                        <td className="px-6 py-4 text-gray-700">
+                          <div className="space-y-2">
+                            {Array.from({ length: 3 }).map((_, index) => {
+                              const Icon = CONTACTS[index];
+
+                              return (
+                                <div
+                                  key={index}
+                                  className="flex items-center space-x-2"
+                                >
+                                  <Icon className="w-4 h-4 text-[#005e9e] flex-shrink-0" />
+                                  <span className="font-mono text-sm">
+                                    {t(
+                                      `companyProfile.companyInfo.contact.${index}`,
+                                    )}
+                                  </span>
+                                </div>
+                              );
+                            })}
+                          </div>
+                        </td>
+                      </tr>
+                      <tr className="hover:bg-gray-50 transition-colors">
+                        <td className="px-6 py-4 whitespace-nowrap font-semibold text-gray-900 bg-gray-50">
+                          統一編號
+                        </td>
+                        <td className="px-6 py-4 text-gray-700 font-mono">
+                          {t("companyProfile.companyInfo.taxId")}
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </Element>
+
+      <Element name="history">
+        <Title>{t("translation:history")}</Title>
+        <p className="whitespace-pre-line">{t("歷史沿革內容")}</p>
+      </Element>
+
+      <Element name="affiliates">
+        <Title>{t("translation:affiliates")}</Title>
+        <div className="grid gap-4 md:grid-cols-3">
+          {AFFILIATED_COMPANIES.map(({ name, logo, phone, fax, vat }) => (
+            <Card
+              key={name}
+              image={logo}
+              imgPlaceholder={<Icons.Briefcase className="p-6" />}
+              title={t(name)}
+            >
+              <p>{t(`${name}地址`)}</p>
+              {phone && (
+                <p>
+                  TEL <a href={`tel:${phone}`}>{t(`${name}電話`)}</a>
+                </p>
+              )}
+              {fax && (
+                <p>
+                  FAX <a href={`fax:${fax}`}>{t(`${name}傳真`)}</a>
+                </p>
+              )}
+              {vat && (
+                <p>
+                  {t("統一編號")} {vat}
+                </p>
+              )}
+            </Card>
+          ))}
+        </div>
+      </Element>
     </>
   );
 };
