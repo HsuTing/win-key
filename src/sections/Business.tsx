@@ -6,6 +6,7 @@ import { Element } from "react-scroll";
 import Banner from "@/components/Banner";
 import Title from "@/components/Title";
 import Icons from "@/components/Icons";
+import Image from "next/image";
 
 const BUSINESSES = [
   {
@@ -32,6 +33,41 @@ const BUSINESSES = [
     image:
       "https://images.pexels.com/photos/3735747/pexels-photo-3735747.jpeg?auto=compress&cs=tinysrgb&w=800",
     items: [{}, {}, {}, {}],
+  },
+];
+
+const FOCUSED_SDGS = [
+  {
+    number: 6,
+    color: "#26BDE2",
+  },
+  {
+    number: 7,
+    color: "#FCC30B",
+  },
+  {
+    number: 8,
+    color: "#A21942",
+  },
+  {
+    number: 9,
+    color: "#FD6925",
+  },
+  {
+    number: 11,
+    color: "#FD9D24",
+  },
+  {
+    number: 12,
+    color: "#BF8B2E",
+  },
+  {
+    number: 13,
+    color: "#3F7E44",
+  },
+  {
+    number: 17,
+    color: "#19486A",
   },
 ];
 
@@ -122,7 +158,78 @@ const Business = () => {
         </section>
       </Element>
 
-      <Title>{t("永續發展目標 SDGs")}</Title>
+      <Element name="sdgs">
+        <section id="sdgs" className="py-20 bg-gray-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <Title>{t("translation:sdgs")}</Title>
+
+            <div className="mb-16">
+              <div className="bg-white rounded-2xl shadow-xl p-8 mb-12">
+                <Image
+                  src="https://images.pexels.com/photos/6962024/pexels-photo-6962024.jpeg?auto=compress&cs=tinysrgb&w=500&h=750&dpr=1"
+                  alt="SDGs"
+                  className="w-full h-auto rounded-lg shadow-lg"
+                  width={500}
+                  height={750}
+                />
+              </div>
+
+              <div className="bg-white rounded-2xl shadow-xl p-8 mb-16">
+                <div className="prose prose-lg max-w-none text-gray-700 leading-relaxed">
+                  {Array.from({ length: 2 }).map((_, index) => (
+                    <p key={index} className={index === 0 ? "" : "mt-6"}>
+                      {t(`sdgs.description.${index}`)}
+                    </p>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <h3 className="text-3xl font-bold text-gray-900 text-center mb-12">
+                {t("sdgs.target")}
+              </h3>
+
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+                {FOCUSED_SDGS.map((sdg) => (
+                  <div
+                    key={sdg.number}
+                    className={'group-sdg relative h-48 w-full perspective-1000'}
+                  >
+                    <div
+                      className={`relative w-full h-full transition-transform duration-700 transform-style-preserve-3d group-sdg-hover:rotate-y-180`}
+                    >
+                      <div
+                        className="absolute inset-0 w-full h-full backface-hidden rounded-2xl shadow-lg flex items-center justify-center text-white font-bold text-6xl cursor-pointer"
+                        style={{ backgroundColor: sdg.color }}
+                      >
+                        <div className="text-center">
+                          <div className="text-8xl font-black mb-2">
+                            {sdg.number}
+                          </div>
+                          <div className="text-sm font-medium px-2 leading-tight">
+                            {t(`sdgs.${sdg.number}.title`)}
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Back Side - Description */}
+                      <div
+                        className="absolute inset-0 w-full h-full backface-hidden rotate-y-180 rounded-2xl shadow-lg p-4 flex items-center justify-center text-white"
+                        style={{ backgroundColor: sdg.color }}
+                      >
+                        <p className="text-sm leading-relaxed text-center font-medium">
+                          {t(`sdgs.${sdg.number}.description`)}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+      </Element>
 
       <Title>{t("營業執照")}</Title>
     </>
