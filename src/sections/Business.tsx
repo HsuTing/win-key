@@ -7,6 +7,7 @@ import Banner from "@/components/Banner";
 import Title from "@/components/Title";
 import Icons from "@/components/Icons";
 import Image from "next/image";
+import sdg from "@/images/business/SDGs_and_TWLogo.png";
 
 const BUSINESSES = [
   {
@@ -159,22 +160,20 @@ const Business = () => {
       </Element>
 
       <Element name="sdgs">
-        <section id="sdgs" className="py-20 bg-gray-50">
+        <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <Title>{t("translation:sdgs")}</Title>
 
             <div className="mb-16">
               <div className="bg-white rounded-2xl shadow-xl p-8 mb-12">
                 <Image
-                  src="https://images.pexels.com/photos/6962024/pexels-photo-6962024.jpeg?auto=compress&cs=tinysrgb&w=500&h=750&dpr=1"
+                  src={sdg}
                   alt="SDGs"
-                  className="w-full h-auto rounded-lg shadow-lg"
-                  width={500}
-                  height={750}
+                  className="w-full h-auto rounded-lg"
+                  width={903}
+                  height={520}
                 />
-              </div>
 
-              <div className="bg-white rounded-2xl shadow-xl p-8 mb-16">
                 <div className="prose prose-lg max-w-none text-gray-700 leading-relaxed">
                   {Array.from({ length: 2 }).map((_, index) => (
                     <p key={index} className={index === 0 ? "" : "mt-6"}>
@@ -194,7 +193,9 @@ const Business = () => {
                 {FOCUSED_SDGS.map((sdg) => (
                   <div
                     key={sdg.number}
-                    className={'group-sdg relative h-48 w-full perspective-1000'}
+                    className={
+                      "group-sdg relative h-48 w-full perspective-1000"
+                    }
                   >
                     <div
                       className={`relative w-full h-full transition-transform duration-700 transform-style-preserve-3d group-sdg-hover:rotate-y-180`}
@@ -231,7 +232,74 @@ const Business = () => {
         </section>
       </Element>
 
-      <Title>{t("營業執照")}</Title>
+      <Element name="license">
+        <section className="py-20 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <Title>{t("營業執照")}</Title>
+
+            <div className="max-w-4xl mx-auto">
+              <div className="grid md:grid-cols-2 gap-8">
+                <div className="relative" style={{ aspectRatio: "210/297" }}>
+                  <div className="absolute inset-0 bg-gradient-to-br from-amber-100 via-amber-50 to-yellow-50 rounded-lg shadow-2xl border-8 border-amber-200">
+                    <div className="absolute inset-4 border-4 border-double border-amber-400 rounded-md">
+                      <div className="absolute -top-2 -left-2 w-4 h-4 bg-amber-300 rotate-45 border border-amber-400"></div>
+                      <div className="absolute -top-2 -right-2 w-4 h-4 bg-amber-300 rotate-45 border border-amber-400"></div>
+                      <div className="absolute -bottom-2 -left-2 w-4 h-4 bg-amber-300 rotate-45 border border-amber-400"></div>
+                      <div className="absolute -bottom-2 -right-2 w-4 h-4 bg-amber-300 rotate-45 border border-amber-400"></div>
+                    </div>
+
+                    <div className="h-full flex flex-col items-center justify-center p-8 relative z-10">
+                      <div className="bg-white rounded-lg shadow-inner p-6 w-full h-full flex flex-col items-center justify-center border-2 border-gray-200">
+                        <Icons.FileText className="h-16 w-16 text-amber-600 mb-4" />
+                        <h4 className="text-xl font-bold text-gray-800 mb-2">
+                          營業執照
+                        </h4>
+                        <p className="text-gray-600 text-center text-sm mb-4">
+                          請放置 A4 尺寸營業執照
+                        </p>
+                        <div className="w-full h-32 border-2 border-dashed border-gray-300 rounded-lg flex items-center justify-center bg-gray-50">
+                          <span className="text-gray-400 text-sm">
+                            執照影像區域
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="relative" style={{ aspectRatio: "210/297" }}>
+                  <div className="absolute inset-0 bg-gradient-to-br from-amber-100 via-amber-50 to-yellow-50 rounded-lg shadow-2xl border-8 border-amber-200">
+                    <div className="absolute inset-4 border-4 border-double border-amber-400 rounded-md">
+                      <div className="absolute -top-2 -left-2 w-4 h-4 bg-amber-300 rotate-45 border border-amber-400"></div>
+                      <div className="absolute -top-2 -right-2 w-4 h-4 bg-amber-300 rotate-45 border border-amber-400"></div>
+                      <div className="absolute -bottom-2 -left-2 w-4 h-4 bg-amber-300 rotate-45 border border-amber-400"></div>
+                      <div className="absolute -bottom-2 -right-2 w-4 h-4 bg-amber-300 rotate-45 border border-amber-400"></div>
+                    </div>
+
+                    {/* Content area */}
+                    <div className="h-full flex flex-col items-center justify-center p-8 relative z-10">
+                      <div className="bg-white rounded-lg shadow-inner p-6 w-full h-full flex flex-col items-center justify-center border-2 border-gray-200">
+                        <Icons.FileText className="h-16 w-16 text-amber-600 mb-4" />
+                        <h4 className="text-xl font-bold text-gray-800 mb-2">
+                          相關證照
+                        </h4>
+                        <p className="text-gray-600 text-center text-sm mb-4">
+                          請放置 A4 尺寸相關證照
+                        </p>
+                        <div className="w-full h-32 border-2 border-dashed border-gray-300 rounded-lg flex items-center justify-center bg-gray-50">
+                          <span className="text-gray-400 text-sm">
+                            證照影像區域
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </Element>
     </>
   );
 };
