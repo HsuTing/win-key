@@ -209,8 +209,6 @@ const About = () => {
       <Element name="history">
         <section className="py-20 bg-white">
           <Title>{t("translation:history")}</Title>
-
-          <p className="whitespace-pre-line">{t("歷史沿革內容")}</p>
         </section>
       </Element>
 

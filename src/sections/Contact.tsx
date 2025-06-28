@@ -26,7 +26,7 @@ const Contact = () => {
     setStatus(result);
 
     if (result === "error") {
-      alert(t("表單錯誤訊息"));
+      alert(t("error"));
     }
   }
 
@@ -41,10 +41,10 @@ const Contact = () => {
         flex flex-col lg:flex-row gap-16 lg:items-stretch"
       >
         <div className="flex flex-col gap-2 flex-1">
-          {t("引言")}
+          {t("introduction")}
           <a href="tel:+0492522313" className="inline-flex">
             <Icons.Phone className="mr-2 aspect-square w-4" />
-            {t("translation:phone")}
+            +0492522313
           </a>
           <a href="mailto:winsingjp@gmail.com" className="inline-flex">
             <Icons.Mail className="mr-2 aspect-square w-4" />
@@ -56,12 +56,11 @@ const Contact = () => {
           className="relative flex flex-col gap-6 lg:basis-2/3"
           onSubmit={handleSubmit}
         >
-          <Input name="name" label={t("姓名")} required />
-          <Input name="company" label={t("公司名稱")} />
-          <Input name="email" label="email" type="email" required />
-          <Input name="tel" label={t("電話")} type="tel" required />
-          <Textarea name="content" label={t("聯繫內容")} required />
-          {/* <Input id={`${id}-file`} type='file' label={t('上傳附件')} /> */}
+          <Input name="name" label={t("name")} required />
+          <Input name="company" label={t("companyName")} />
+          <Input name="email" label={t("email")} type="email" required />
+          <Input name="tel" label={t("phone")} type="tel" required />
+          <Textarea name="content" label={t("content")} required />
           <div className="flex items-center">
             <input
               type="checkbox"
@@ -70,11 +69,11 @@ const Contact = () => {
               required
             />
             <label htmlFor={`${id}-policy`} className="text-sm">
-              {t("同意隱私權政策")}
+              {t("agreePolicy")}
             </label>
           </div>
           <button type="submit" className="btn">
-            {t("送出")}
+            {t("submit")}
           </button>
 
           {status === "loading" && (
@@ -86,7 +85,7 @@ const Contact = () => {
           {status === "done" && (
             <div className="absolute inset-0 flex flex-col justify-center items-center bg-white/60">
               <Icons.Check className="mb-4 w-20 text-green-600" />
-              {t("表單已成功送出")}
+              {t("success")}
             </div>
           )}
         </form>

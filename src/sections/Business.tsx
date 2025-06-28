@@ -235,7 +235,7 @@ const Business = () => {
       <Element name="license">
         <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <Title>{t("營業執照")}</Title>
+            <Title>{t('translation:license')}</Title>
 
             <div className="max-w-4xl mx-auto">
               <div className="grid md:grid-cols-2 gap-8">
