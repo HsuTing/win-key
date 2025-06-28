@@ -1,15 +1,11 @@
 {
-  "代表致詞": "代表致詞",
-  "代表致詞內容": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam malesuada venenatis velit id semper. Duis blandit tortor vel libero tincidunt molestie. Proin sodales nunc nisl, quis lobortis est ultricies sed. Nulla facilisi. Ut sit amet risus blandit, sodales nibh ac, mattis est. Proin facilisis euismod erat a pulvinar. Nullam nec augue at ante accumsan lobortis. Donec ut varius mauris, et vulputate ligula. Sed feugiat cursus mollis. Cras dignissim eu velit ornare auctor. Praesent sed pulvinar risus, a suscipit enim. Integer finibus dignissim cursus. Aenean massa lectus, malesuada at commodo non, blandit sit amet ligula. Suspendisse potenti. Aenean eleifend consectetur ante, a mattis massa. Sed facilisis ex erat, in tristique nibh gravida vel. Proin fringilla feugiat pretium. Integer bibendum turpis et elit viverra tempus. Phasellus viverra lectus eu eros scelerisque, ac auctor velit feugiat. Fusce a egestas orci. Mauris tristique sed lorem ac malesuada. Nunc nec mauris non dolor euismod posuere. Sed quis ultrices turpis, et laoreet purus. Donec non ultrices risus. Quisque tristique ullamcorper turpis id auctor. Proin a sollicitudin nisi, eget tristique leo. Nam et cursus est. Suspendisse potenti. Maecenas sodales neque suscipit erat bibendum, a auctor eros rhoncus. Nunc velit magna, commodo in viverra id, pharetra nec magna. Nulla non mollis lacus. Cras sed porta mauris. Vestibulum non odio nibh. Nunc vehicula nibh eu elit venenatis, sed consectetur est gravida. Suspendisse sed neque dui. Aenean ullamcorper orci sem. Nunc quis urna dui. In sit amet iaculis nisi, vitae mattis justo. Integer nec lectus at neque mollis consequat. Ut sed nisi dui. Ut euismod tellus et metus rhoncus, in aliquet metus facilisis. Vestibulum suscipit risus ac urna egestas, sit amet euismod erat pharetra. Cras et tristique orci. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec molestie ac massa quis pharetra. Donec non est justo. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec est felis, dictum et dignissim id, laoreet quis massa.",
-  "歷史沿革": "歷史沿革",
-  "歷史沿革內容": "民國60年：\n現任總經理之父——莊宗復——以個人企業「永泰企業社」起家，開始廢五金回收事業。\n\n莊百慶與兄弟姊妹合資創業，設立「允基企業有限公司」。",
-  "企業關聯公司": "企業關聯公司",
-  "允貿環保科技有限公司": "允貿環保科技有限公司",
-  "允貿環保科技有限公司地址": "No. 17, Ziqiang 2nd Rd., Pingshan Vil., Nantou City, Nantou County 540027, Taiwan (R.O.C.)",
-  "允貿環保科技有限公司電話": "049-2260388",
-  "允貿環保科技有限公司傳真": "049-2260398",
-  "允興投資股份有限公司": "允興投資股份有限公司",
-  "允興投資股份有限公司地址": "彰化縣芬園鄉芬園村芬草路二段205號2樓",
-  "允興(泰國)股份有限公司": "允興(泰國)股份有限公司",
-  "允興(泰國)股份有限公司地址": "泰國"
+  "ceoMessage": {
+    "title": "代表致詞",
+    "subtitle": "來自董事長的話",
+    "content": "允基企業有限公司成立於1995年，總部位於台灣中部，專注於環保工程與金屬資源再生領域。經過近30年的發展，公司已成為業界領先企業之一，在台灣累積超過三十年的豐富經驗。允基的核心業務涵蓋有色金屬（如金、銀、錫、銅、鋅、鉛）的加工與買賣，以及工業生產過程中廢料的回收、處理與再生，致力於推動循環經濟並促進永續發展。",
+    "content2": "為拓展國際市場，允興（泰國）股份有限公司於2023年在泰國北柳府的Gateway工業區（Gateway Industrial Estate）設立據點，積極拓展當地業務，強化國際供應鏈佈局。該工業區位於泰國東部經濟走廊（EEC）核心地帶，擁有完善的基礎設施與產業配套，為公司海外發展提供強大支持。",
+    "content3": "本公司不僅在台灣與泰國擁有生產據點，貿易業務更拓展至東南亞、歐美市場，並在台灣、日本、中國等地建立穩固的業務網絡。本公司秉持創新、專業與永續發展的經營理念，持續深耕資源再生與環保產業，攜手全球夥伴共創綠色未來。",
+    "ceoName": "莊百慶",
+    "ceoTitle": "允基企業有限公司 董事長"
+  }
 }

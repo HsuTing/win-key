@@ -1,12 +1,11 @@
 {
-  "代表介紹": "代表介紹",
-  "代表致詞內容": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam malesuada venenatis velit id semper. Duis blandit tortor vel libero tincidunt molestie. Proin sodales nunc nisl, quis lobortis est ultricies sed. Nulla facilisi. Ut sit amet risus blandit, sodales nibh ac, mattis est. Proin facilisis euismod erat a pulvinar. Nullam nec augue at ante accumsan lobortis. Donec ut varius mauris, et vulputate ligula. Sed feugiat cursus mollis. Cras dignissim eu velit ornare auctor. Praesent sed pulvinar risus, a suscipit enim. Integer finibus dignissim cursus. Aenean massa lectus, malesuada at commodo non, blandit sit amet ligula. Suspendisse potenti. Aenean eleifend consectetur ante, a mattis massa. Sed facilisis ex erat, in tristique nibh gravida vel. Proin fringilla feugiat pretium. Integer bibendum turpis et elit viverra tempus. Phasellus viverra lectus eu eros scelerisque, ac auctor velit feugiat. Fusce a egestas orci. Mauris tristique sed lorem ac malesuada. Nunc nec mauris non dolor euismod posuere. Sed quis ultrices turpis, et laoreet purus. Donec non ultrices risus. Quisque tristique ullamcorper turpis id auctor. Proin a sollicitudin nisi, eget tristique leo. Nam et cursus est. Suspendisse potenti. Maecenas sodales neque suscipit erat bibendum, a auctor eros rhoncus. Nunc velit magna, commodo in viverra id, pharetra nec magna. Nulla non mollis lacus. Cras sed porta mauris. Vestibulum non odio nibh. Nunc vehicula nibh eu elit venenatis, sed consectetur est gravida. Suspendisse sed neque dui. Aenean ullamcorper orci sem. Nunc quis urna dui. In sit amet iaculis nisi, vitae mattis justo. Integer nec lectus at neque mollis consequat. Ut sed nisi dui. Ut euismod tellus et metus rhoncus, in aliquet metus facilisis. Vestibulum suscipit risus ac urna egestas, sit amet euismod erat pharetra. Cras et tristique orci. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec molestie ac massa quis pharetra. Donec non est justo. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec est felis, dictum et dignissim id, laoreet quis massa.",
-  "企業關聯公司": "企業關聯公司",
-  "允貿環保科技有限公司": "允貿環保科技有限公司",
-  "允貿環保科技有限公司地址": "南投縣南投市平山里自強二路17號",
-  "允貿環保科技有限公司電話": "0932-541705",
-  "允興投資股份有限公司": "允興投資股份有限公司",
-  "允興投資股份有限公司地址": "彰化縣芬園鄉芬園村芬草路二段205號2樓",
-  "允興(泰國)股份有限公司": "允興(泰國)股份有限公司",
-  "允興(泰國)股份有限公司地址": "泰國"
+  "ceoMessage": {
+    "title": "代表挨拶",
+    "subtitle": "会長からのメッセージ",
+    "content": "Win Key Recycle Industry LLCは1995年に設立され、台湾中部に本社を置き、環境工学と金属資源再生分野に特化しています。約30年の発展を経て、当社は業界をリードする企業の一つとなり、台湾で30年以上の豊富な経験を蓄積してきました。Win Keyの中核事業は、有色金属（金、銀、錫、銅、亜鉛、鉛など）の加工・売買、および工業生産過程で発生する廃料の回収・処理・再生を包括し、循環経済の推進と持続可能な発展の促進に取り組んでいます。",
+    "content2": "国際市場の拡大のため、Win Key（タイ）株式会社は2023年にタイのチョンブリ県のGateway工業団地（Gateway Industrial Estate）に拠点を設立し、現地事業の積極的な拡大と国際サプライチェーンの強化を図っています。この工業団地はタイ東部経済回廊（EEC）の中核地帯に位置し、完備されたインフラと産業配套を有し、当社の海外発展に強力な支援を提供しています。",
+    "content3": "当社は台湾とタイに生産拠点を持つだけでなく、貿易事業は東南アジア、欧米市場にまで拡大し、台湾、日本、中国などで堅固な事業ネットワークを構築しています。当社は革新、専門性、持続可能な発展の経営理念を堅持し、資源再生と環境保護産業の深耕を続け、世界のパートナーと共にグリーンな未来を創造します。",
+    "ceoName": "莊百慶",
+    "ceoTitle": "Win Key Recycle Industry LLC 会長"
+  }
 }
