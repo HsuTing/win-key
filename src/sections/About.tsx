@@ -8,6 +8,35 @@ import Title from "@/components/Title";
 import Icons from "@/components/Icons";
 import ceo from "@/images/about/ceo.jpg";
 import signature from "@/images/about/signature.png";
+import image1971 from "@/images/about/timeline/1971.jpg";
+import image1995 from "@/images/about/timeline/1995.jpg";
+import image2022 from "@/images/about/timeline/2022.png";
+import image2023 from "@/images/about/timeline/2023.jpg";
+
+const CONTACTS = [Icons.Phone, Icons.Phone, Icons.Mail];
+
+const TIMELINE = [
+  {
+    year: "1971",
+    image: image1971,
+  },
+  {
+    year: "1995",
+    image: image1995,
+  },
+  {
+    year: "2022",
+    image: image2022,
+  },
+  {
+    year: "2023",
+    image: image2023,
+  },
+  {
+    year: "2025",
+    image: image1995,
+  },
+];
 
 const AFFILIATED_COMPANIES = [
   {
@@ -27,8 +56,6 @@ const AFFILIATED_COMPANIES = [
     noFax: true,
   },
 ];
-
-const CONTACTS = [Icons.Phone, Icons.Phone, Icons.Mail];
 
 const About = () => {
   const { t } = useTranslation(["about", "translation"]);
@@ -207,8 +234,86 @@ const About = () => {
       </Element>
 
       <Element name="history">
-        <section className="py-20 bg-white">
-          <Title>{t("translation:history")}</Title>
+        <section className="py-20 bg-gradient-to-br from-slate-900/95 via-blue-900/90 to-indigo-900/95 text-white relative overflow-hidde">
+          <div className="absolute inset-0 opacity-20">
+            <div
+              className="absolute inset-0"
+              style={{
+                backgroundImage: `radial-gradient(circle at 1px 1px, rgba(255,255,255,0.3) 1px, transparent 0)`,
+                backgroundSize: "30px 30px",
+              }}
+            />
+          </div>
+
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <Title>{t("translation:history")}</Title>
+
+            <div className="relative">
+              {/* Central Timeline Line */}
+              <div className="absolute left-1/2 transform -translate-x-0.5 w-1 h-full bg-gradient-to-b from-blue-300 via-white to-blue-300 shadow-lg"></div>
+
+              <div className="space-y-2">
+                {TIMELINE.map(({ year, image }, index) => {
+                  const isRight = index % 2 === 1;
+
+                  return (
+                    <div
+                      key={year}
+                      className="relative flex items-center -mb-4 z-10"
+                    >
+                      {isRight && (
+                        <>
+                          <div className="w-1/2 pr-8"></div>
+                          <div className="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full border-4 border-white shadow-xl z-20"></div>
+                        </>
+                      )}
+
+                      <div
+                        className={`w-1/2 p${isRight ? "l" : "r"}-8 text-${!isRight ? "right" : "left"}`}
+                      >
+                        <div className="bg-white/95 backdrop-blur-sm text-black p-6 rounded-xl shadow-2xl border border-white/20 hover:shadow-3xl hover:scale-105 transition-all duration-300">
+                          <div
+                            className={`flex items-start ${!isRight ? "" : "flex-row-reverse"} gap-4`}
+                          >
+                            <div className="w-40 h-32 flex-shrink-0 overflow-hidden rounded-lg transition-transform duration-300 hover:scale-110 shadow-lg">
+                              <Image
+                                src={image}
+                                alt="image"
+                                className="w-full h-full object-cover"
+                              />
+
+                              <div className="hidden w-full h-full bg-gray-200 items-center justify-center">
+                                <span className="text-xs text-gray-500" />
+                              </div>
+                            </div>
+
+                            <div className="flex-1">
+                              <div className="text-2xl font-bold text-blue-600 mb-2 drop-shadow-sm">
+                                {year}
+                              </div>
+                              <h4 className="text-xl font-semibold mb-3">
+                                {t(`history.${year}.title`)}
+                              </h4>
+                              <p className="text-gray-700">
+                                {t(`history.${year}.description`)}
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      {!isRight && (
+                        <>
+                          <div className="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full border-4 border-white shadow-xl z-20"></div>
+                          <div className="w-1/2 pl-8"></div>
+                        </>
+                      )}
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          </div>
         </section>
       </Element>
 
