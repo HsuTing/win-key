@@ -122,7 +122,13 @@ const Business = () => {
                         ) : (
                           <div
                             key={item.group}
-                            className={`group/${item.group}`}
+                            className={
+                              {
+                                metal: "group/metal",
+                                precious: "group/precious",
+                                rare: "group/rare",
+                              }[item.group]
+                            }
                           >
                             <div className="flex items-center justify-between cursor-pointer hover:text-white transition-colors">
                               <div className="flex items-center">
@@ -134,12 +140,28 @@ const Business = () => {
                                 </h4>
                               </div>
                               <Icons.ChevronDown
-                                className={`w-5 h-5 text-blue-300 group-hover/${item.group}:rotate-180 transition-transform duration-300`}
+                                className={
+                                  {
+                                    metal:
+                                      "w-5 h-5 text-blue-300 group-hover/metal:rotate-180 transition-transform duration-300",
+                                    precious:
+                                      "w-5 h-5 text-blue-300 group-hover/precious:rotate-180 transition-transform duration-300",
+                                    rare: "w-5 h-5 text-blue-300 group-hover/rare:rotate-180 transition-transform duration-300",
+                                  }[item.group]
+                                }
                               />
                             </div>
 
                             <div
-                              className={`max-h-0 overflow-hidden group-hover/${item.group}:max-h-20 transition-all duration-300 ease-in-out`}
+                              className={
+                                {
+                                  metal:
+                                    "max-h-0 overflow-hidden group-hover/metal:max-h-20 transition-all duration-300 ease-in-out",
+                                  precious:
+                                    "max-h-0 overflow-hidden group-hover/precious:max-h-20 transition-all duration-300 ease-in-out",
+                                  rare: "max-h-0 overflow-hidden group-hover/rare:max-h-20 transition-all duration-300 ease-in-out",
+                                }[item.group]
+                              }
                             >
                               <p className="text-base text-blue-200 pl-8 pt-2 border-l-2 border-blue-400 ml-8">
                                 {t(
@@ -194,11 +216,11 @@ const Business = () => {
                   <div
                     key={sdg.number}
                     className={
-                      "group-sdg relative h-48 w-full perspective-1000"
+                      "group/sdg relative h-48 w-full perspective-1000"
                     }
                   >
                     <div
-                      className={`relative w-full h-full transition-transform duration-700 transform-style-preserve-3d group-sdg-hover:rotate-y-180`}
+                      className={`relative w-full h-full transition-transform duration-700 transform-style-preserve-3d group-hover/sdg:rotate-y-180`}
                     >
                       <div
                         className="absolute inset-0 w-full h-full backface-hidden rounded-2xl shadow-lg flex items-center justify-center text-white font-bold text-6xl cursor-pointer"
@@ -235,7 +257,7 @@ const Business = () => {
       <Element name="license">
         <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <Title>{t('translation:license')}</Title>
+            <Title>{t("translation:license")}</Title>
 
             <div className="max-w-4xl mx-auto">
               <div className="grid md:grid-cols-2 gap-8">

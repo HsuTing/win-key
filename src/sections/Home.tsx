@@ -77,7 +77,7 @@ const Home = () => {
               <div className="relative w-full max-w-lg">
                 {/* 公司風光標題 - 對齊左側主標題 */}
                 <h3 className="text-2xl font-bold text-white mb-6 text-center">
-                  {t('slideTitle')}
+                  {t("slideTitle")}
                 </h3>
 
                 {/* 照片容器 - 調整高度對齊「了解更多」按鈕下緣 */}
