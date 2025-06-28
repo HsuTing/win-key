@@ -30,7 +30,7 @@ const About = () => {
       />
       <div className="container pb-16">
         <Element name="ceo-message">
-          <Title>{t("ceo-message")}</Title>
+          <Title>{t("translation:ceo-message")}</Title>
           <img
             className="mx-auto mb-8 w-[300px] aspect-[3/4] p-1 rounded ring-2 ring-gray-300 dark:ring-gray-500 md:float-left md:mr-8 md:w-[200px]"
             src="https://picsum.photos/500"
@@ -39,8 +39,8 @@ const About = () => {
           {t("代表致詞內容")}
         </Element>
 
-        <Element name="company-info">
-          <Title>{t("translation::company-info")}</Title>
+        <Element name="company-profile">
+          <Title>{t("translation:company-profile")}</Title>
         </Element>
 
         <Element name="history">
@@ -48,8 +48,8 @@ const About = () => {
           <p className="whitespace-pre-line">{t("歷史沿革內容")}</p>
         </Element>
 
-        <Element name="affiliated-companies">
-          <Title>{t("translation:affiliated-companies")}</Title>
+        <Element name="affiliates">
+          <Title>{t("translation:affiliates")}</Title>
           <div className="grid gap-4 md:grid-cols-3">
             {AFFILIATED_COMPANIES.map(({ name, logo, phone, fax, vat }) => (
               <Card
