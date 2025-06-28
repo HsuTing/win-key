@@ -71,7 +71,7 @@ const Navbar = () => {
         </Link>
 
         <Link
-          className="inline-flex items-start flex-col justify-center ursor-pointer ml-4"
+          className="inline-flex items-start flex-col justify-center ursor-pointer ml-4 cursor-pointer"
           to="home"
           smooth={true}
           offset={-80}
@@ -91,7 +91,7 @@ const Navbar = () => {
           <Link
             key={section}
             className="inline-flex p-4 content-center items-center flex-wrap border-b-4 border-b-transparent !text-pm-contrast hover:bg-pm-contrast/50 transition-colors ease-linear capitalize cursor-pointer relative"
-            to={section}
+            to={items ? '' : section}
             smooth={true}
             offset={-80}
             duration={500}
@@ -107,7 +107,6 @@ const Navbar = () => {
               clearTimeout(timeoutRef.current);
               timeoutRef.current = setTimeout(setSecionOption, 300, null);
             }}
-            disabled={Boolean(items)}
           >
             {t(section)}
 

@@ -269,9 +269,9 @@ const About = () => {
                       )}
 
                       <div
-                        className={`w-1/2 p${isRight ? "l" : "r"}-8 text-${!isRight ? "right" : "left"}`}
+                        className={`w-1/2 p${isRight ? "l" : "r"}-8 ${!isRight ? "text-right" : "text-left"}`}
                       >
-                        <div className="bg-white/95 backdrop-blur-sm text-black p-6 rounded-xl shadow-2xl border border-white/20 hover:shadow-3xl hover:scale-105 transition-all duration-300">
+                        <div className="bg-white/95 backdrop-blur-sm text-black p-6 rounded-xl shadow-2xl border border-white/20 transition-all duration-300">
                           <div
                             className={`flex items-start ${!isRight ? "" : "flex-row-reverse"} gap-4`}
                           >

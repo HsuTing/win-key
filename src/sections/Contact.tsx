@@ -11,7 +11,7 @@ import Input from "@/components/inputs/Input";
 import Textarea from "@/components/inputs/Textarea";
 
 const Contact = () => {
-  const { t } = useTranslation(["contact", "translation"]);
+  const { t, i18n } = useTranslation(["contact", "translation"]);
   const [status, setStatus] = useState<"idle" | "loading" | "done" | "error">(
     "idle",
   );
@@ -68,9 +68,14 @@ const Contact = () => {
               className="mr-2 w-4 h-4"
               required
             />
-            <label htmlFor={`${id}-policy`} className="text-sm">
+
+            <a href={{
+              'zh-TW': 'https://docs.google.com/document/d/1e-InhtnJAp-CDI7vWnV-aG9nA_Y2mvmw-X-_2agiAqI/edit?tab=t.0',
+              en: "https://docs.google.com/document/d/1e-InhtnJAp-CDI7vWnV-aG9nA_Y2mvmw-X-_2agiAqI/edit?tab=t.1vtjbz1njexi",
+              ja: 'https://docs.google.com/document/d/1e-InhtnJAp-CDI7vWnV-aG9nA_Y2mvmw-X-_2agiAqI/edit?tab=t.og2yboq7z0m'
+            }[i18n.language]} target="_blank">
               {t("agreePolicy")}
-            </label>
+            </a>
           </div>
           <button type="submit" className="btn">
             {t("submit")}
