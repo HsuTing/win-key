@@ -191,7 +191,7 @@ const About = () => {
                       </tr>
                       <tr className="hover:bg-gray-50 transition-colors">
                         <td className="px-6 py-4 whitespace-nowrap font-semibold text-gray-900 bg-gray-50">
-                          統一編號
+                          {t("companyProfile.companyInfoTitle.taxId")}
                         </td>
                         <td className="px-6 py-4 text-gray-700 font-mono">
                           {t("companyProfile.companyInfo.taxId")}
