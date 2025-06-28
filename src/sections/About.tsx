@@ -5,7 +5,6 @@ import { useTranslation } from "react-i18next";
 import { Element } from "react-scroll";
 import Banner from "@/components/Banner";
 import Title from "@/components/Title";
-import Card from "@/components/Card";
 import Icons from "@/components/Icons";
 import ceo from "@/images/about/ceo.jpg";
 import signature from "@/images/about/signature.png";
@@ -13,13 +12,20 @@ import signature from "@/images/about/signature.png";
 const AFFILIATED_COMPANIES = [
   {
     name: "允貿環保科技有限公司",
-    logo: "",
-    phone: "049-2260388",
-    fax: "049-2260398",
-    vat: "90151719",
+    Icon: Icons.Globe,
+    iconClassName: "h-8 w-8 text-green-600 mr-3",
   },
-  { name: "允興投資股份有限公司", vat: "90142450" },
-  { name: "允興(泰國)股份有限公司" },
+  {
+    name: "允興投資股份有限公司",
+    Icon: Icons.Building,
+    iconClassName: "h-8 w-8 text-blue-600 mr-3",
+  },
+  {
+    name: "允興(泰國)股份有限公司",
+    Icon: Icons.Users,
+    iconClassName: "h-8 w-8 text-purple-600 mr-3",
+    noFax: true,
+  },
 ];
 
 const CONTACTS = [Icons.Phone, Icons.Phone, Icons.Mail];
@@ -201,39 +207,73 @@ const About = () => {
       </Element>
 
       <Element name="history">
-        <Title>{t("translation:history")}</Title>
-        <p className="whitespace-pre-line">{t("歷史沿革內容")}</p>
+        <section className="py-20 bg-white">
+          <Title>{t("translation:history")}</Title>
+
+          <p className="whitespace-pre-line">{t("歷史沿革內容")}</p>
+        </section>
       </Element>
 
       <Element name="affiliates">
-        <Title>{t("translation:affiliates")}</Title>
-        <div className="grid gap-4 md:grid-cols-3">
-          {AFFILIATED_COMPANIES.map(({ name, logo, phone, fax, vat }) => (
-            <Card
-              key={name}
-              image={logo}
-              imgPlaceholder={<Icons.Briefcase className="p-6" />}
-              title={t(name)}
-            >
-              <p>{t(`${name}地址`)}</p>
-              {phone && (
-                <p>
-                  TEL <a href={`tel:${phone}`}>{t(`${name}電話`)}</a>
-                </p>
+        <section className="py-20 bg-gray-50">
+          <Title>{t("translation:affiliates")}</Title>
+
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {AFFILIATED_COMPANIES.map(
+                ({ name, Icon, iconClassName, noFax }, index) => (
+                  <div key={name} className="space-y-4">
+                    <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow min-h-[280px] flex flex-col">
+                      <div className="flex items-center mb-4">
+                        <Icon className={iconClassName} />
+
+                        <h3 className="text-xl font-semibold text-gray-900">
+                          {t(`affiliates.${index}.name`)}
+                        </h3>
+                      </div>
+                      <div className="space-y-3 text-gray-600 flex-grow">
+                        <div className="flex items-start">
+                          <Icons.MapPin className="h-5 w-5 text-gray-400 mr-2 mt-0.5 flex-shrink-0" />
+                          <div className="flex items-center gap-2">
+                            <span>{t(`affiliates.${index}.address`)}</span>
+                            <a
+                              href="https://maps.google.com/?q=彰化縣芬園鄉芬園村芬草路二段205號2樓"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="text-blue-600 hover:text-blue-800 transition-colors"
+                            >
+                              <Icons.ExternalLink className="h-4 w-4" />
+                            </a>
+                          </div>
+                        </div>
+                        <div className="flex items-center">
+                          <Icons.Phone className="h-5 w-5 text-gray-400 mr-2" />
+                          <span>{t(`affiliates.${index}.phone`)}</span>
+                        </div>
+                        {!noFax && (
+                          <div className="flex items-center">
+                            <Icons.Mail className="h-5 w-5 text-gray-400 mr-2" />
+                            <span>{t(`affiliates.${index}.fax`)}</span>
+                          </div>
+                        )}
+                        <div className="text-sm text-gray-500">
+                          {t(`affiliates.${index}.taxId`)}
+                        </div>
+                      </div>
+                    </div>
+                    {/* Photo Container */}
+                    <div className="bg-gray-100 rounded-xl p-6 min-h-[200px] flex items-center justify-center">
+                      <div className="text-gray-400 text-center">
+                        <div className="text-sm">照片區域</div>
+                        <div className="text-xs mt-1">允興投資股份有限公司</div>
+                      </div>
+                    </div>
+                  </div>
+                ),
               )}
-              {fax && (
-                <p>
-                  FAX <a href={`fax:${fax}`}>{t(`${name}傳真`)}</a>
-                </p>
-              )}
-              {vat && (
-                <p>
-                  {t("統一編號")} {vat}
-                </p>
-              )}
-            </Card>
-          ))}
-        </div>
+            </div>
+          </div>
+        </section>
       </Element>
     </>
   );

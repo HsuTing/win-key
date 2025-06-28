@@ -1,7 +1,5 @@
 {
   "ceoMessage": {
-    "title": "代表致詞",
-    "subtitle": "來自董事長的話",
     "content": "允基企業有限公司成立於1995年，總部位於台灣中部，專注於環保工程與金屬資源再生領域。經過近30年的發展，公司已成為業界領先企業之一，在台灣累積超過三十年的豐富經驗。允基的核心業務涵蓋有色金屬（如金、銀、錫、銅、鋅、鉛）的加工與買賣，以及工業生產過程中廢料的回收、處理與再生，致力於推動循環經濟並促進永續發展。",
     "content2": "為拓展國際市場，允興（泰國）股份有限公司於2023年在泰國北柳府的Gateway工業區（Gateway Industrial Estate）設立據點，積極拓展當地業務，強化國際供應鏈佈局。該工業區位於泰國東部經濟走廊（EEC）核心地帶，擁有完善的基礎設施與產業配套，為公司海外發展提供強大支持。",
     "content3": "本公司不僅在台灣與泰國擁有生產據點，貿易業務更拓展至東南亞、歐美市場，並在台灣、日本、中國等地建立穩固的業務網絡。本公司秉持創新、專業與永續發展的經營理念，持續深耕資源再生與環保產業，攜手全球夥伴共創綠色未來。",
@@ -9,8 +7,6 @@
     "ceoTitle": "允基企業有限公司 董事長"
   },
   "companyProfile": {
-    "title": "公司簡介",
-    "subtitle": "了解允基企業",
     "companyInfoTitle": {
       "name": "名稱",
       "established": "創設時間",
@@ -40,8 +36,6 @@
     }
   },
   "history": {
-    "title": "歷史沿革",
-    "subtitle": "允基企業的發展歷程",
     "timeline": [
       {
         "year": "1971",
@@ -70,25 +64,29 @@
       }
     ]
   },
-  "affiliates": {
-    "title": "集團關聯公司",
-    "subtitle": "我們的合作夥伴網絡",
-    "companies": [
-      {
-        "name": "允興投資股份有限公司",
-        "description": "集團持股公司",
-        "logo": "/WIN KEY LOGO.jpg"
-      },
-      {
-        "name": "允貿環保科技有限公司",
-        "description": "南投南崗工業區",
-        "logo": "/WIN KEY LOGO.jpg"
-      },
-      {
-        "name": "允興（泰國）股份有限公司",
-        "description": "泰國北柳府",
-        "logo": "/WIN KEY LOGO.jpg"
-      }
-    ]
-  }
+  "affiliates": [
+    {
+      "name": "允興投資股份有限公司",
+      "address": "彰化縣芬園鄉芬園村芬草路二段205號2樓",
+      "address-link": "https://maps.google.com/?q=彰化縣芬園鄉芬園村芬草路二段205號2樓",
+      "phone": "049-2522313",
+      "fax": "049-2510477",
+      "taxId": "統一編號: 90142450"
+    },
+    {
+      "name": "允貿環保科技有限公司",
+      "address": "南投縣南投市自強二路17號　南崗工業區",
+      "address-link": "https://maps.google.com/?q=南投縣南投市自強二路17號",
+      "phone": "049-2260388",
+      "fax": "049-2260398",
+      "taxId": "統一編號: 90151719"
+    },
+    {
+      "name": "允興（泰國）股份有限公司",
+      "address": "216/7 Moo.7, Hua Samrong, Plaeng Yao, Chachoengsao, 24190",
+      "address-link": "https://maps.google.com/?q=216/7 Moo.7, Hua Samrong, Plaeng Yao, Chachoengsao, 24190",
+      "phone": "092-299-4536",
+      "taxId": "WinSing (Thailand) Co.,ltd"
+    }
+  ]
 }
