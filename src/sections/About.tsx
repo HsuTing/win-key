@@ -23,53 +23,63 @@ const AFFILIATED_COMPANIES = [
 const About = () => {
   const { t } = useTranslation(["about", "translation"]);
   return (
-    <Element name="about">
+    <>
       <Banner
         title={t("translation:about")}
         image="https://picsum.photos/1200/900"
       />
       <div className="container pb-16">
-        <Title>{t("代表致詞")}</Title>
-        <img
-          className="mx-auto mb-8 w-[300px] aspect-[3/4] p-1 rounded ring-2 ring-gray-300 dark:ring-gray-500 md:float-left md:mr-8 md:w-[200px]"
-          src="https://picsum.photos/500"
-          alt="Bordered avatar"
-        />
-        {t("代表致詞內容")}
+        <Element name="ceo-message">
+          <Title>{t("ceo-message")}</Title>
+          <img
+            className="mx-auto mb-8 w-[300px] aspect-[3/4] p-1 rounded ring-2 ring-gray-300 dark:ring-gray-500 md:float-left md:mr-8 md:w-[200px]"
+            src="https://picsum.photos/500"
+            alt="Bordered avatar"
+          />
+          {t("代表致詞內容")}
+        </Element>
 
-        <Title>{t("歷史沿革")}</Title>
-        <p className="whitespace-pre-line">{t("歷史沿革內容")}</p>
+        <Element name="company-info">
+          <Title>{t("translation::company-info")}</Title>
+        </Element>
 
-        <Title>{t("企業關聯公司")}</Title>
-        <div className="grid gap-4 md:grid-cols-3">
-          {AFFILIATED_COMPANIES.map(({ name, logo, phone, fax, vat }) => (
-            <Card
-              key={name}
-              image={logo}
-              imgPlaceholder={<Icons.Briefcase className="p-6" />}
-              title={t(name)}
-            >
-              <p>{t(`${name}地址`)}</p>
-              {phone && (
-                <p>
-                  TEL <a href={`tel:${phone}`}>{t(`${name}電話`)}</a>
-                </p>
-              )}
-              {fax && (
-                <p>
-                  FAX <a href={`fax:${fax}`}>{t(`${name}傳真`)}</a>
-                </p>
-              )}
-              {vat && (
-                <p>
-                  {t("統一編號")} {vat}
-                </p>
-              )}
-            </Card>
-          ))}
-        </div>
+        <Element name="history">
+          <Title>{t("translation:history")}</Title>
+          <p className="whitespace-pre-line">{t("歷史沿革內容")}</p>
+        </Element>
+
+        <Element name="affiliated-companies">
+          <Title>{t("translation:affiliated-companies")}</Title>
+          <div className="grid gap-4 md:grid-cols-3">
+            {AFFILIATED_COMPANIES.map(({ name, logo, phone, fax, vat }) => (
+              <Card
+                key={name}
+                image={logo}
+                imgPlaceholder={<Icons.Briefcase className="p-6" />}
+                title={t(name)}
+              >
+                <p>{t(`${name}地址`)}</p>
+                {phone && (
+                  <p>
+                    TEL <a href={`tel:${phone}`}>{t(`${name}電話`)}</a>
+                  </p>
+                )}
+                {fax && (
+                  <p>
+                    FAX <a href={`fax:${fax}`}>{t(`${name}傳真`)}</a>
+                  </p>
+                )}
+                {vat && (
+                  <p>
+                    {t("統一編號")} {vat}
+                  </p>
+                )}
+              </Card>
+            ))}
+          </div>
+        </Element>
       </div>
-    </Element>
+    </>
   );
 };
 

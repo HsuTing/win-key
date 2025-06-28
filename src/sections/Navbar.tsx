@@ -23,7 +23,7 @@ const Navbar = () => {
 
   const SECTIONS = [
     {
-      section: "company-info",
+      section: "about",
       items: ["ceo-message", "company-profile", "history", "affiliates"],
     },
     {
