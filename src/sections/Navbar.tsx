@@ -130,7 +130,7 @@ const Navbar = () => {
                   return (
                     <Link
                       key={item}
-                      className="flex items-center space-x-3 px-4 py-2 text-gray-700 hover:bg-[#005e9e]/10 transition-colors"
+                      className="flex items-center space-x-3 px-4 py-2 text-gray-700 hover:bg-[#005e9e]/10 transition-colors whitespace-nowrap"
                       to={item}
                       smooth={true}
                       offset={-80}
