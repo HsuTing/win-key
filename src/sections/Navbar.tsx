@@ -88,9 +88,13 @@ const Navbar = () => {
         <div className="grow" />
 
         {SECTIONS.map(({ section, items }) => (
-          <div
+          <Link
             key={section}
             className="inline-flex p-4 content-center items-center flex-wrap border-b-4 border-b-transparent !text-pm-contrast hover:bg-pm-contrast/50 transition-colors ease-linear capitalize cursor-pointer relative"
+            to={section}
+            smooth={true}
+            offset={-80}
+            duration={500}
             onMouseEnter={() => {
               if (!items) return;
 
@@ -103,6 +107,7 @@ const Navbar = () => {
               clearTimeout(timeoutRef.current);
               timeoutRef.current = setTimeout(setSecionOption, 300, null);
             }}
+            disabled={Boolean(items)}
           >
             {t(section)}
 
@@ -145,7 +150,7 @@ const Navbar = () => {
                 })}
               </div>
             )}
-          </div>
+          </Link>
         ))}
 
         <button className="group relative p-4 w-16 h-20 !bg-transparent">
