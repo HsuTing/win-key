@@ -6,7 +6,7 @@ import { useTranslation } from "react-i18next";
 const INFO = [
   { title: "foundingTime", info: "1995" },
   { title: "ceo", info: "莊百慶" },
-  { title: "TEL", info: "translation:phone", href: "tel:0492522313" },
+  { title: "TEL", info: "049-2522313", href: "tel:0492522313" },
   { title: "FAX", info: "049-2510477", href: "fax:049-2510477" },
   {
     title: "Email",

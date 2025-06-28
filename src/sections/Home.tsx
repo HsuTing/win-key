@@ -4,6 +4,7 @@ import { Element } from "react-scroll";
 import { useTranslation } from "react-i18next";
 import Icons from "@/components/Icons";
 import Image from "next/image";
+import { Link } from "react-scroll";
 
 const Home = () => {
   const { t } = useTranslation(["home"]);
@@ -36,51 +37,56 @@ const Home = () => {
         id="home"
         className="relative min-h-screen flex items-center justify-center overflow-hidden"
       >
-        {/* 背景圖片 - 工廠/金屬加工背景 */}
         <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-[#005e9e]">
           <div className="absolute inset-0 bg-black/40"></div>
-          {/* 工廠背景圖片 */}
           <div className="absolute inset-0 bg-[url('https://images.pexels.com/photos/162568/factory-steel-mill-industry-162568.jpeg')] bg-cover bg-center opacity-20"></div>
         </div>
 
-        {/* 主要內容 - 左右分欄布局 */}
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-white">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
-            {/* 左側文字內容 */}
             <div>
-              {/* 主標語 - 左對齊 */}
               <h2 className="text-4xl lg:text-5xl font-bold mb-8 leading-tight text-left">
                 {t("title")}
               </h2>
 
-              {/* 公司介紹 - 左對齊 */}
               <div className="max-w-3xl mb-12">
                 <p className="text-lg lg:text-xl text-gray-200 leading-relaxed text-left">
                   {t("subtitle")}
                 </p>
               </div>
 
-              {/* 按鈕組 */}
               <div className="flex flex-col sm:flex-row gap-4">
-                <button className="bg-[#005e9e] hover:bg-[#004a7f] text-white px-8 py-4 rounded-lg font-semibold transition-colors flex items-center justify-center space-x-2">
-                  <span>{t("cta")}</span>
-                  <Icons.ArrowRight className="w-5 h-5" />
-                </button>
-                <button className="border-2 border-white/30 hover:border-white text-white px-8 py-4 rounded-lg font-semibold transition-colors backdrop-blur-sm bg-transparent">
-                  {t("learnMore")}
-                </button>
+                <Link
+                  to="contact"
+                  smooth={true}
+                  offset={-80}
+                  duration={500}
+                >
+                  <button className="bg-[#005e9e] hover:bg-[#004a7f] text-white px-8 py-4 rounded-lg font-semibold transition-colors flex items-center justify-center space-x-2">
+                    <span>{t("cta")}</span>
+                    <Icons.ArrowRight className="w-5 h-5" />
+                  </button>
+                </Link>
+
+                <Link
+                  to="about"
+                  smooth={true}
+                  offset={-80}
+                  duration={500}
+                >
+                  <button className="border-2 border-white/30 hover:border-white text-white px-8 py-4 rounded-lg font-semibold transition-colors backdrop-blur-sm bg-transparent">
+                    {t("learnMore")}
+                  </button>
+                </Link>
               </div>
             </div>
 
-            {/* 右側照片容器 - 調整尺寸對齊 */}
             <div className="flex justify-end">
               <div className="relative w-full max-w-lg">
-                {/* 公司風光標題 - 對齊左側主標題 */}
                 <h3 className="text-2xl font-bold text-white mb-6 text-center">
                   {t("slideTitle")}
                 </h3>
 
-                {/* 照片容器 - 調整高度對齊「了解更多」按鈕下緣 */}
                 <div
                   className="relative w-full h-80 rounded-2xl overflow-hidden"
                   style={{
@@ -88,11 +94,8 @@ const Home = () => {
                     background: `radial-gradient(circle at center, rgba(255, 255, 255, 0.1) 0%, transparent 70%)`,
                   }}
                 >
-                  {/* 內層容器 */}
                   <div className="relative z-10 w-full h-full bg-black/20 rounded-xl overflow-hidden backdrop-blur-sm border border-white/20">
-                    {/* 幻燈片容器 */}
                     <div className="relative w-full h-full">
-                      {/* 照片 */}
                       <div className="absolute inset-0">
                         <Image
                           src={slides[currentSlide]}
@@ -103,7 +106,6 @@ const Home = () => {
                         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
                       </div>
 
-                      {/* 導航按鈕 */}
                       <button
                         onClick={prevSlide}
                         className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black/50 text-white p-2 rounded-full hover:bg-black/70 transition-colors"
@@ -118,7 +120,6 @@ const Home = () => {
                         <Icons.ChevronRight className="w-6 h-6" />
                       </button>
 
-                      {/* 指示點 */}
                       <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
                         {slides.map((_, index) => (
                           <button
@@ -136,7 +137,6 @@ const Home = () => {
                   </div>
                 </div>
 
-                {/* 照片描述 - 置於容器外部下方，對齊「了解更多」按鈕下緣 */}
                 <div className="mt-4 text-center">
                   <h4 className="text-lg font-semibold text-white mb-2">
                     {t(`slides.${currentSlide}.title`)}
@@ -150,7 +150,6 @@ const Home = () => {
           </div>
         </div>
 
-        {/* 滾動指示器 */}
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white animate-bounce">
           <Icons.ChevronDown className="w-8 h-8" />
         </div>

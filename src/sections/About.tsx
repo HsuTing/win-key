@@ -61,7 +61,7 @@ const About = () => {
   const { t } = useTranslation(["about", "translation"]);
 
   return (
-    <>
+    <Element name="about">
       <Banner
         title={t("translation:about")}
         image="https://picsum.photos/1200/900"
@@ -378,7 +378,7 @@ const About = () => {
           </div>
         </section>
       </Element>
-    </>
+    </Element>
   );
 };
 
