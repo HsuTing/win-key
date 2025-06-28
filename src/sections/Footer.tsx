@@ -4,8 +4,8 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 
 const INFO = [
-  { title: "創立時間", info: "1995" },
-  { title: "負責人", info: "莊百慶" },
+  { title: "foundingTime", info: "1995" },
+  { title: "ceo", info: "莊百慶" },
   { title: "TEL", info: "translation:phone", href: "tel:0492522313" },
   { title: "FAX", info: "049-2510477", href: "fax:049-2510477" },
   {
@@ -13,7 +13,7 @@ const INFO = [
     info: "winsingjp@gmail.com",
     href: "mailto:winsingjp@gmail.com",
   },
-  { title: "統一編號", info: "016273391" },
+  { title: "taxId", info: "016273391" },
 ];
 
 const Footer = () => {

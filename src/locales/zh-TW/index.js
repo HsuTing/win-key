@@ -3,6 +3,7 @@ import about from "./about.json";
 import home from "./home.json";
 import business from "./business.json";
 import contact from "./contact.json";
+import footer from "./footer.json";
 
 const locales = {
   translation,
@@ -10,6 +11,7 @@ const locales = {
   home,
   business,
   contact,
+  footer,
 };
 
 export default locales;
