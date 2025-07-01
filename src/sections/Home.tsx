@@ -51,7 +51,13 @@ const Home = () => {
 
               <div className="max-w-3xl mb-12">
                 <p className="text-lg lg:text-xl text-gray-200 leading-relaxed text-left">
-                  {t("subtitle")}
+                  {t("subtitle").split("\n").map((line, index, lines) => (
+                    <React.Fragment key={index}>
+                      {line}
+
+                      {index < lines.length - 1 && <br />}
+                    </React.Fragment>
+                  ))}
                 </p>
               </div>
 
