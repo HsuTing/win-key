@@ -97,17 +97,15 @@ const About = () => {
 
               <div className="lg:col-span-3 space-y-6 relative h-full flex flex-col justify-center">
                 <div className="bg-gray-50 p-8 rounded-xl relative">
-                  <p className="text-lg text-gray-700 leading-relaxed mb-6">
-                    {t("ceoMessage.content")}
-                  </p>
-
-                  <p className="text-lg text-gray-700 leading-relaxed mb-6">
-                    {t("ceoMessage.content2")}
-                  </p>
+                  {t('ceoMessage.content').split('\n').map((line, index) => (
+                    <p key={index} className="text-lg text-gray-700 leading-relaxed mb-6">
+                      {line}
+                    </p>
+                  ))}
 
                   <div className="border-l-4 border-[#005e9e] pl-6 mb-8">
                     <p className="text-lg text-gray-700 leading-relaxed">
-                      {t("ceoMessage.content3")}
+                      {t("ceoMessage.sub-content")}
                     </p>
                   </div>
 
