@@ -51,35 +51,27 @@ const Home = () => {
 
               <div className="max-w-3xl mb-12">
                 <p className="text-lg lg:text-xl text-gray-200 leading-relaxed text-left">
-                  {t("subtitle").split("\n").map((line, index, lines) => (
-                    <React.Fragment key={index}>
-                      {line}
+                  {t("subtitle")
+                    .split("\n")
+                    .map((line, index, lines) => (
+                      <React.Fragment key={index}>
+                        {line}
 
-                      {index < lines.length - 1 && <br />}
-                    </React.Fragment>
-                  ))}
+                        {index < lines.length - 1 && <br />}
+                      </React.Fragment>
+                    ))}
                 </p>
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link
-                  to="contact"
-                  smooth={true}
-                  offset={-80}
-                  duration={500}
-                >
+                <Link to="contact" smooth={true} offset={-80} duration={500}>
                   <button className="bg-[#005e9e] hover:bg-[#004a7f] text-white px-8 py-4 rounded-lg font-semibold transition-colors flex items-center justify-center space-x-2">
                     <span>{t("cta")}</span>
                     <Icons.ArrowRight className="w-5 h-5" />
                   </button>
                 </Link>
 
-                <Link
-                  to="about"
-                  smooth={true}
-                  offset={-80}
-                  duration={500}
-                >
+                <Link to="about" smooth={true} offset={-80} duration={500}>
                   <button className="border-2 border-white/30 hover:border-white text-white px-8 py-4 rounded-lg font-semibold transition-colors backdrop-blur-sm bg-transparent">
                     {t("learnMore")}
                   </button>

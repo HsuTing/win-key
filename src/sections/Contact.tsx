@@ -69,11 +69,17 @@ const Contact = () => {
               required
             />
 
-            <a href={{
-              'zh-TW': 'https://docs.google.com/document/d/1e-InhtnJAp-CDI7vWnV-aG9nA_Y2mvmw-X-_2agiAqI/edit?tab=t.0',
-              en: "https://docs.google.com/document/d/1e-InhtnJAp-CDI7vWnV-aG9nA_Y2mvmw-X-_2agiAqI/edit?tab=t.1vtjbz1njexi",
-              ja: 'https://docs.google.com/document/d/1e-InhtnJAp-CDI7vWnV-aG9nA_Y2mvmw-X-_2agiAqI/edit?tab=t.og2yboq7z0m'
-            }[i18n.language]} target="_blank">
+            <a
+              href={
+                {
+                  "zh-TW":
+                    "https://docs.google.com/document/d/1e-InhtnJAp-CDI7vWnV-aG9nA_Y2mvmw-X-_2agiAqI/edit?tab=t.0",
+                  en: "https://docs.google.com/document/d/1e-InhtnJAp-CDI7vWnV-aG9nA_Y2mvmw-X-_2agiAqI/edit?tab=t.1vtjbz1njexi",
+                  ja: "https://docs.google.com/document/d/1e-InhtnJAp-CDI7vWnV-aG9nA_Y2mvmw-X-_2agiAqI/edit?tab=t.og2yboq7z0m",
+                }[i18n.language]
+              }
+              target="_blank"
+            >
               {t("agreePolicy")}
             </a>
           </div>

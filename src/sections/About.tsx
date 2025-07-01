@@ -12,7 +12,7 @@ import image1971 from "@/images/about/timeline/1971.jpg";
 import image1995 from "@/images/about/timeline/1995.jpg";
 import image2023 from "@/images/about/timeline/2023.jpg";
 
-const CONTACTS = [Icons.Phone, Icons.Phone, Icons.Mail];
+const CONTACTS = [Icons.Phone, Icons.Fax, Icons.Mail];
 
 const TIMELINE = [
   {
@@ -97,11 +97,16 @@ const About = () => {
 
               <div className="lg:col-span-3 space-y-6 relative h-full flex flex-col justify-center">
                 <div className="bg-gray-50 p-8 rounded-xl relative">
-                  {t('ceoMessage.content').split('\n').map((line, index) => (
-                    <p key={index} className="text-lg text-gray-700 leading-relaxed mb-6">
-                      {line}
-                    </p>
-                  ))}
+                  {t("ceoMessage.content")
+                    .split("\n")
+                    .map((line, index) => (
+                      <p
+                        key={index}
+                        className="text-lg text-gray-700 leading-relaxed mb-6"
+                      >
+                        {line}
+                      </p>
+                    ))}
 
                   <div className="border-l-4 border-[#005e9e] pl-6 mb-8">
                     <p className="text-lg text-gray-700 leading-relaxed">
@@ -352,7 +357,7 @@ const About = () => {
                         </div>
                         {!noFax && (
                           <div className="flex items-center">
-                            <Icons.Mail className="h-5 w-5 text-gray-400 mr-2" />
+                            <Icons.Fax className="h-5 w-5 text-gray-400 mr-2" />
                             <span>{t(`affiliates.${index}.fax`)}</span>
                           </div>
                         )}
