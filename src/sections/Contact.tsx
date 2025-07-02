@@ -69,6 +69,10 @@ const Contact = () => {
               required
             />
 
+            <label htmlFor={`${id}-policy`} className="cursor-pointer select-none">
+              {t("agreePolicy.0")}
+            </label>
+
             <a
               href={
                 {
@@ -80,7 +84,7 @@ const Contact = () => {
               }
               target="_blank"
             >
-              {t("agreePolicy")}
+              {t("agreePolicy.1")}
             </a>
           </div>
           <button type="submit" className="btn">
