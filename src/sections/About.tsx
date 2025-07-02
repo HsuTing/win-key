@@ -100,20 +100,16 @@ const About = () => {
                 <div className="bg-gray-50 p-8 rounded-xl relative">
                   {t("ceoMessage.content")
                     .split("\n")
-                    .map((line, index) => (
+                    .map((line, index, lines) => (
                       <p
                         key={index}
-                        className="text-lg text-gray-700 leading-relaxed mb-6"
+                        className="text-lg text-gray-700 leading-relaxed"
                       >
                         {line}
+
+                        {index < lines.length - 1 && <br />}
                       </p>
                     ))}
-
-                  <div className="border-l-4 border-[#005e9e] pl-6 mb-8">
-                    <p className="text-lg text-gray-700 leading-relaxed">
-                      {t("ceoMessage.sub-content")}
-                    </p>
-                  </div>
 
                   <div className="flex justify-end">
                     <Image
