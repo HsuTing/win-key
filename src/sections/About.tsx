@@ -11,6 +11,7 @@ import signature from "@/images/about/signature.png";
 import image1971 from "@/images/about/timeline/1971.jpg";
 import image1995 from "@/images/about/timeline/1995.jpg";
 import image2023 from "@/images/about/timeline/2023.jpg";
+import image2025 from "@/images/about/timeline/2025.jpg";
 
 const CONTACTS = [Icons.Phone, Icons.Fax, Icons.Mail];
 
@@ -25,7 +26,7 @@ const TIMELINE = [
   },
   {
     year: "2022",
-    image: image1995,
+    image: image2025,
   },
   {
     year: "2023",
@@ -33,7 +34,7 @@ const TIMELINE = [
   },
   {
     year: "2025",
-    image: image1995,
+    image: image2025,
   },
 ];
 
