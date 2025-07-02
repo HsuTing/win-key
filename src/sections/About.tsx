@@ -12,6 +12,9 @@ import image1971 from "@/images/about/timeline/1971.jpg";
 import image1995 from "@/images/about/timeline/1995.jpg";
 import image2023 from "@/images/about/timeline/2023.jpg";
 import image2025 from "@/images/about/timeline/2025.jpg";
+import winHsingLogo from '@/images/about/affiliates/WIN HSING LOGO.jpg';
+import winMoreLogo from '@/images/about/affiliates/WIN MORE LOGO.jpg';
+import winSingThaiLogo from '@/images/about/affiliates/WIN SING THAI LOGO.jpg';
 
 const CONTACTS = [Icons.Phone, Icons.Fax, Icons.Mail];
 
@@ -43,17 +46,21 @@ const AFFILIATED_COMPANIES = [
     name: "允貿環保科技有限公司",
     Icon: Icons.Globe,
     iconClassName: "h-8 w-8 text-green-600 mr-3",
+    logo: winHsingLogo,
   },
   {
     name: "允興投資股份有限公司",
     Icon: Icons.Building,
     iconClassName: "h-8 w-8 text-blue-600 mr-3",
+    logo: winMoreLogo,
   },
   {
     name: "允興(泰國)股份有限公司",
     Icon: Icons.Users,
     iconClassName: "h-8 w-8 text-purple-600 mr-3",
+    logo: winSingThaiLogo,
     noFax: true,
+    noTaxId: true,
   },
 ];
 
@@ -323,7 +330,7 @@ const About = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {AFFILIATED_COMPANIES.map(
-                ({ name, Icon, iconClassName, noFax }, index) => (
+                ({ name, Icon, iconClassName, logo, noFax, noTaxId }, index) => (
                   <div key={name} className="space-y-4">
                     <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow min-h-[280px] flex flex-col">
                       <div className="flex items-center mb-4">
@@ -339,7 +346,7 @@ const About = () => {
                           <div className="flex items-center gap-2">
                             <span>{t(`affiliates.${index}.address`)}</span>
                             <a
-                              href="https://maps.google.com/?q=彰化縣芬園鄉芬園村芬草路二段205號2樓"
+                              href={t(`affiliates.${index}.address-link`)}
                               target="_blank"
                               rel="noopener noreferrer"
                               className="text-blue-600 hover:text-blue-800 transition-colors"
@@ -358,17 +365,14 @@ const About = () => {
                             <span>{t(`affiliates.${index}.fax`)}</span>
                           </div>
                         )}
-                        <div className="text-sm text-gray-500">
+                        {!noTaxId && <div className="text-sm text-gray-500">
                           {t(`affiliates.${index}.taxId`)}
-                        </div>
+                        </div>}
                       </div>
                     </div>
                     {/* Photo Container */}
                     <div className="bg-gray-100 rounded-xl p-6 min-h-[200px] flex items-center justify-center">
-                      <div className="text-gray-400 text-center">
-                        <div className="text-sm">照片區域</div>
-                        <div className="text-xs mt-1">允興投資股份有限公司</div>
-                      </div>
+                      <Image src={logo} alt={name} className="max-w-full max-h-full" />
                     </div>
                   </div>
                 ),
