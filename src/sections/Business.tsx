@@ -8,31 +8,29 @@ import Title from "@/components/Title";
 import Icons from "@/components/Icons";
 import Image from "next/image";
 import sdg from "@/images/business/SDGs_and_TWLogo.png";
+import metal from '@/images/business/businesses/metal.jpg';
+import waste from '@/images/business/businesses/waste.jpg';
 
 const BUSINESSES = [
   {
     name: "金屬",
-    image:
-      "https://images.pexels.com/photos/1108572/pexels-photo-1108572.jpeg?auto=compress&cs=tinysrgb&w=800",
+    image: metal,
     items: [{ group: "metal" }, { group: "precious" }, { group: "rare" }],
   },
   {
     name: "塑膠",
-    image:
-      "https://images.pexels.com/photos/3735218/pexels-photo-3735218.jpeg?auto=compress&cs=tinysrgb&w=800",
+    image: metal,
     description: true,
     items: [{}, {}, {}],
   },
   {
     name: "一般、有害事業廢棄物",
-    image:
-      "https://images.pexels.com/photos/3735747/pexels-photo-3735747.jpeg?auto=compress&cs=tinysrgb&w=800",
+    image: waste,
     items: [{}, {}, {}, {}],
   },
   {
     name: "再生資源國際貿易",
-    image:
-      "https://images.pexels.com/photos/3735747/pexels-photo-3735747.jpeg?auto=compress&cs=tinysrgb&w=800",
+    image: waste,
     items: [{}, {}, {}, {}],
   },
 ];
@@ -93,12 +91,11 @@ const Business = () => {
                   key={name}
                   className="relative bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow group h-96"
                 >
-                  <div
+                  <Image
+                    src={image}
                     className="absolute inset-0 bg-cover bg-center transition-transform duration-300 group-hover:scale-105"
-                    style={{
-                      backgroundImage: `url('${image}')`,
-                    }}
-                  ></div>
+                    alt={name}
+                  />
                   <div className="absolute inset-0 bg-gradient-to-br from-blue-900/90 via-blue-800/85 to-blue-700/80"></div>
                   <div className="relative p-8 text-white h-full flex flex-col">
                     <h3 className="text-3xl font-bold mb-6">
