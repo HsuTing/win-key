@@ -9,6 +9,7 @@ import Icons from "@/components/Icons";
 import Image from "next/image";
 import sdg from "@/images/business/SDGs_and_TWLogo.png";
 import metal from '@/images/business/businesses/metal.jpg';
+import plastic from '@/images/business/businesses/plastic.jpg';
 import waste from '@/images/business/businesses/waste.jpg';
 
 const BUSINESSES = [
@@ -19,7 +20,7 @@ const BUSINESSES = [
   },
   {
     name: "塑膠",
-    image: metal,
+    image: plastic,
     description: true,
     items: [{}, {}, {}],
   },
