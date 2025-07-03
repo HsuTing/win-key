@@ -44,20 +44,14 @@ const TIMELINE = [
 const AFFILIATED_COMPANIES = [
   {
     name: "允貿環保科技有限公司",
-    Icon: Icons.Globe,
-    iconClassName: "h-8 w-8 text-green-600 mr-3",
     logo: winHsingLogo,
   },
   {
     name: "允興投資股份有限公司",
-    Icon: Icons.Building,
-    iconClassName: "h-8 w-8 text-blue-600 mr-3",
     logo: winMoreLogo,
   },
   {
     name: "允興(泰國)股份有限公司",
-    Icon: Icons.Users,
-    iconClassName: "h-8 w-8 text-purple-600 mr-3",
     logo: winSingThaiLogo,
     noFax: true,
     noTaxId: true,
@@ -330,11 +324,11 @@ const About = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {AFFILIATED_COMPANIES.map(
-                ({ name, Icon, iconClassName, logo, noFax, noTaxId }, index) => (
+                ({ name, logo, noFax, noTaxId }, index) => (
                   <div key={name} className="space-y-4">
                     <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow min-h-[280px] flex flex-col">
                       <div className="flex items-center mb-4">
-                        <Icon className={iconClassName} />
+                        <Image src={logo} alt={name} width={20} height={20} className="mr-2" />
 
                         <h3 className="text-xl font-semibold text-gray-900">
                           {t(`affiliates.${index}.name`)}
