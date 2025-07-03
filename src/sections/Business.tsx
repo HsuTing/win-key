@@ -228,7 +228,7 @@ const Business = () => {
                           <div className="text-8xl font-black mb-2">
                             {sdg.number}
                           </div>
-                          <div className="text-sm font-medium px-2 leading-tight">
+                          <div className="text-base font-bold px-2 leading-tight">
                             {t(`sdgs.${sdg.number}.title`)}
                           </div>
                         </div>
@@ -239,7 +239,7 @@ const Business = () => {
                         className="absolute inset-0 w-full h-full backface-hidden rotate-y-180 rounded-2xl shadow-lg p-4 flex items-center justify-center text-white"
                         style={{ backgroundColor: sdg.color }}
                       >
-                        <p className="text-sm leading-relaxed text-center font-medium">
+                        <p className="text-base leading-relaxed text-center font-medium">
                           {t(`sdgs.${sdg.number}.description`)}
                         </p>
                       </div>
