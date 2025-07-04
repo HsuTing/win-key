@@ -8,8 +8,8 @@ const INFO = [
   { title: "TEL", info: "049-2522313", href: "tel:0492522313" },
   { title: "FAX", info: "049-2510477", href: "fax:049-2510477" },
   {
-    title: "Email",
-    info: "WINSINGJP@gmail.com",
+    title: "EMAIL",
+    info: "winsingjp@gmail.com",
     href: "mailto:winsingjp@gmail.com",
   },
   { title: "taxId", info: "016273391" },
