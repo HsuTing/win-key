@@ -5,10 +5,7 @@
   "companyName": "公司名稱",
   "phone": "電話",
   "content": "聯繫內容",
-  "agreePolicy": [
-    "同意",
-    "隱私權保護政策"
-  ],
+  "agreePolicy": ["同意", "隱私權保護政策"],
   "submit": "送出",
   "sucess": "表單已成功送出",
   "error": "出了點問題，檢查一下是不是有填錯或等等再試試吧"

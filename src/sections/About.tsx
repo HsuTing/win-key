@@ -12,9 +12,9 @@ import image1971 from "@/images/about/timeline/1971.jpg";
 import image1995 from "@/images/about/timeline/1995.jpg";
 import image2023 from "@/images/about/timeline/2023.jpg";
 import image2025 from "@/images/about/timeline/2025.jpg";
-import winHsingLogo from '@/images/about/affiliates/WIN HSING LOGO.jpg';
-import winMoreLogo from '@/images/about/affiliates/WIN MORE LOGO.jpg';
-import winSingThaiLogo from '@/images/about/affiliates/WIN SING THAI LOGO.jpg';
+import winHsingLogo from "@/images/about/affiliates/WIN HSING LOGO.jpg";
+import winMoreLogo from "@/images/about/affiliates/WIN MORE LOGO.jpg";
+import winSingThaiLogo from "@/images/about/affiliates/WIN SING THAI LOGO.jpg";
 
 const CONTACTS = [Icons.Phone, Icons.Fax, Icons.Mail];
 
@@ -328,7 +328,7 @@ const About = () => {
                   <div key={name} className="space-y-4">
                     <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow min-h-[280px] flex flex-col">
                       <div className="flex items-center mb-4">
-                        <Image src={logo} alt={name} width={20} height={20} className="mr-2" />
+                        <Icons.Company className="h-8 w-8 mr-3 text-pm-dark" />
 
                         <h3 className="text-xl font-semibold text-gray-900">
                           {t(`affiliates.${index}.name`)}
@@ -359,14 +359,20 @@ const About = () => {
                             <span>{t(`affiliates.${index}.fax`)}</span>
                           </div>
                         )}
-                        {!noTaxId && <div className="text-sm text-gray-500">
-                          {t(`affiliates.${index}.taxId`)}
-                        </div>}
+                        {!noTaxId && (
+                          <div className="text-sm text-gray-500">
+                            {t(`affiliates.${index}.taxId`)}
+                          </div>
+                        )}
                       </div>
                     </div>
                     {/* Photo Container */}
                     <div className="bg-gray-100 rounded-xl p-6 min-h-[200px] flex items-center justify-center">
-                      <Image src={logo} alt={name} className="max-w-full max-h-full" />
+                      <Image
+                        src={logo}
+                        alt={name}
+                        className="max-w-full max-h-full"
+                      />
                     </div>
                   </div>
                 ),

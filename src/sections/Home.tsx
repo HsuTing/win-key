@@ -89,7 +89,8 @@ const Home = () => {
                   className="relative w-full h-80 rounded-2xl overflow-hidden"
                   style={{
                     filter: "drop-shadow(0 0 30px rgba(255, 255, 255, 0.1))",
-                    background: `radial-gradient(circle at center, rgba(255, 255, 255, 0.1) 0%, transparent 70%)`,
+                    background:
+                      "radial-gradient(circle at center, rgba(255, 255, 255, 0.1) 0%, transparent 70%)",
                   }}
                 >
                   <div className="relative z-10 w-full h-full bg-black/20 rounded-xl overflow-hidden backdrop-blur-sm border border-white/20">
