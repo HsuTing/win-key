@@ -8,7 +8,9 @@ const Redirect = () => {
   const LANGUAGE = ["en", "zh-TW", "ja"] as const;
 
   useEffect(() => {
-    router.replace(`/${LANGUAGE.includes(i18n.language as typeof LANGUAGE[number]) ? i18n.language : "en"}`);
+    router.replace(
+      `/${LANGUAGE.includes(i18n.language as (typeof LANGUAGE)[number]) ? i18n.language : "en"}`,
+    );
   });
 
   return <></>;

@@ -11,6 +11,8 @@ import sdg from "@/images/business/SDGs_and_TWLogo.png";
 import metal from "@/images/business/businesses/metal.jpg";
 import plastic from "@/images/business/businesses/plastic.jpg";
 import waste from "@/images/business/businesses/waste.jpg";
+import winKey from "@/images/business/licenses/winKey.jpg";
+import clearPermission from "@/images/business/licenses/clearPermission.jpg";
 
 const BUSINESSES = [
   {
@@ -68,6 +70,17 @@ const FOCUSED_SDGS = [
   {
     number: 17,
     color: "#19486A",
+  },
+];
+
+const LICENSES = [
+  {
+    image: winKey,
+    pdf: "/licenses/winKey.pdf",
+  },
+  {
+    image: clearPermission,
+    pdf: "/licenses/clearPermission.pdf",
   },
 ];
 
@@ -259,62 +272,26 @@ const Business = () => {
 
             <div className="max-w-4xl mx-auto">
               <div className="grid md:grid-cols-2 gap-8">
-                <div className="relative" style={{ aspectRatio: "210/297" }}>
-                  <div className="absolute inset-0 bg-gradient-to-br from-amber-100 via-amber-50 to-yellow-50 rounded-lg shadow-2xl border-8 border-amber-200">
-                    <div className="absolute inset-4 border-4 border-double border-amber-400 rounded-md">
-                      <div className="absolute -top-2 -left-2 w-4 h-4 bg-amber-300 rotate-45 border border-amber-400"></div>
-                      <div className="absolute -top-2 -right-2 w-4 h-4 bg-amber-300 rotate-45 border border-amber-400"></div>
-                      <div className="absolute -bottom-2 -left-2 w-4 h-4 bg-amber-300 rotate-45 border border-amber-400"></div>
-                      <div className="absolute -bottom-2 -right-2 w-4 h-4 bg-amber-300 rotate-45 border border-amber-400"></div>
-                    </div>
-
-                    <div className="h-full flex flex-col items-center justify-center p-8 relative z-10">
-                      <div className="bg-white rounded-lg shadow-inner p-6 w-full h-full flex flex-col items-center justify-center border-2 border-gray-200">
-                        <Icons.FileText className="h-16 w-16 text-amber-600 mb-4" />
-                        <h4 className="text-xl font-bold text-gray-800 mb-2">
-                          營業執照
-                        </h4>
-                        <p className="text-gray-600 text-center text-sm mb-4">
-                          請放置 A4 尺寸營業執照
-                        </p>
-                        <div className="w-full h-32 border-2 border-dashed border-gray-300 rounded-lg flex items-center justify-center bg-gray-50">
-                          <span className="text-gray-400 text-sm">
-                            執照影像區域
-                          </span>
-                        </div>
+                {LICENSES.map(({ image, pdf }) => (
+                  <a
+                    key={pdf}
+                    className="relative"
+                    style={{ aspectRatio: "210/297" }}
+                    href={pdf}
+                    target="_blank"
+                  >
+                    <div className="absolute inset-0 bg-gradient-to-br from-amber-100 via-amber-50 to-yellow-50 rounded-lg shadow-2xl border-8 border-amber-200">
+                      <div className="absolute inset-4 border-4 border-double border-amber-400 rounded-md">
+                        <div className="absolute -top-2 -left-2 w-4 h-4 bg-amber-300 rotate-45 border border-amber-400"></div>
+                        <div className="absolute -top-2 -right-2 w-4 h-4 bg-amber-300 rotate-45 border border-amber-400"></div>
+                        <div className="absolute -bottom-2 -left-2 w-4 h-4 bg-amber-300 rotate-45 border border-amber-400"></div>
+                        <div className="absolute -bottom-2 -right-2 w-4 h-4 bg-amber-300 rotate-45 border border-amber-400"></div>
                       </div>
-                    </div>
-                  </div>
-                </div>
 
-                <div className="relative" style={{ aspectRatio: "210/297" }}>
-                  <div className="absolute inset-0 bg-gradient-to-br from-amber-100 via-amber-50 to-yellow-50 rounded-lg shadow-2xl border-8 border-amber-200">
-                    <div className="absolute inset-4 border-4 border-double border-amber-400 rounded-md">
-                      <div className="absolute -top-2 -left-2 w-4 h-4 bg-amber-300 rotate-45 border border-amber-400"></div>
-                      <div className="absolute -top-2 -right-2 w-4 h-4 bg-amber-300 rotate-45 border border-amber-400"></div>
-                      <div className="absolute -bottom-2 -left-2 w-4 h-4 bg-amber-300 rotate-45 border border-amber-400"></div>
-                      <div className="absolute -bottom-2 -right-2 w-4 h-4 bg-amber-300 rotate-45 border border-amber-400"></div>
+                      <Image src={image} className="h-full" alt={pdf} />
                     </div>
-
-                    {/* Content area */}
-                    <div className="h-full flex flex-col items-center justify-center p-8 relative z-10">
-                      <div className="bg-white rounded-lg shadow-inner p-6 w-full h-full flex flex-col items-center justify-center border-2 border-gray-200">
-                        <Icons.FileText className="h-16 w-16 text-amber-600 mb-4" />
-                        <h4 className="text-xl font-bold text-gray-800 mb-2">
-                          相關證照
-                        </h4>
-                        <p className="text-gray-600 text-center text-sm mb-4">
-                          請放置 A4 尺寸相關證照
-                        </p>
-                        <div className="w-full h-32 border-2 border-dashed border-gray-300 rounded-lg flex items-center justify-center bg-gray-50">
-                          <span className="text-gray-400 text-sm">
-                            證照影像區域
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                  </a>
+                ))}
               </div>
             </div>
           </div>
