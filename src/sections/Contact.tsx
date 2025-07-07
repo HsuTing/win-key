@@ -76,17 +76,7 @@ const Contact = () => {
               {t("agreePolicy.0")}
             </label>
 
-            <a
-              href={
-                {
-                  "zh-TW":
-                    "https://docs.google.com/document/d/1e-InhtnJAp-CDI7vWnV-aG9nA_Y2mvmw-X-_2agiAqI/edit?tab=t.0",
-                  en: "https://docs.google.com/document/d/1e-InhtnJAp-CDI7vWnV-aG9nA_Y2mvmw-X-_2agiAqI/edit?tab=t.1vtjbz1njexi",
-                  ja: "https://docs.google.com/document/d/1e-InhtnJAp-CDI7vWnV-aG9nA_Y2mvmw-X-_2agiAqI/edit?tab=t.og2yboq7z0m",
-                }[i18n.language]
-              }
-              target="_blank"
-            >
+            <a href={`/privacyPolicy/${i18n.language}.pdf`} target="_blank">
               {t("agreePolicy.1")}
             </a>
           </div>
