@@ -13,27 +13,28 @@ import plastic from "@/images/business/businesses/plastic.jpg";
 import waste from "@/images/business/businesses/waste.jpg";
 import winKey from "@/images/business/licenses/winKey.jpg";
 import clearPermission from "@/images/business/licenses/clearPermission.jpg";
+import renewableResources from "@/images/business/businesses/renewable-resources.jpg";
 
 const BUSINESSES = [
   {
-    name: "金屬",
+    name: "metal",
     image: metal,
     items: [{ group: "metal" }, { group: "precious" }, { group: "rare" }],
   },
   {
-    name: "塑膠",
+    name: "plastic",
     image: plastic,
     description: true,
     items: [{}, {}, {}],
   },
   {
-    name: "一般、有害事業廢棄物",
+    name: "waste",
     image: waste,
     items: [{}, {}, {}, {}],
   },
   {
-    name: "再生資源國際貿易",
-    image: waste,
+    name: "renewable resources",
+    image: renewableResources,
     items: [{}, {}, {}, {}],
   },
 ];
