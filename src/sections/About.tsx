@@ -15,6 +15,7 @@ import image2025 from "@/images/about/timeline/2025.jpg";
 import winHsingLogo from "@/images/about/affiliates/WIN HSING LOGO.jpg";
 import winMoreLogo from "@/images/about/affiliates/WIN MORE LOGO.jpg";
 import winSingThaiLogo from "@/images/about/affiliates/WIN SING THAI LOGO.jpg";
+import cx from "classnames";
 
 const CONTACTS = [Icons.Phone, Icons.Fax, Icons.Mail];
 
@@ -250,7 +251,7 @@ const About = () => {
 
             <div className="relative">
               {/* Central Timeline Line */}
-              <div className="absolute left-1/2 transform -translate-x-0.5 w-1 h-full bg-gradient-to-b from-blue-300 via-white to-blue-300 shadow-lg"></div>
+              <div className="sm:block hidden absolute lg:left-1/2 left-8 transform -translate-x-0.5 w-1 h-full bg-gradient-to-b from-blue-300 via-white to-blue-300 shadow-lg"></div>
 
               <div className="space-y-2">
                 {TIMELINE.map(({ year, image }, index) => {
@@ -259,17 +260,28 @@ const About = () => {
                   return (
                     <div
                       key={year}
-                      className="relative flex items-center -mb-4 z-10"
+                      className="relative flex items-center mb-2 z-10"
                     >
-                      {isRight && (
-                        <>
-                          <div className="w-1/2 pr-8"></div>
-                          <div className="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full border-4 border-white shadow-xl z-20"></div>
-                        </>
-                      )}
+                      <div
+                        className={cx(
+                          "lg:w-1/2 pr-8 sm:block hidden",
+                          !isRight && "lg:hidden",
+                        )}
+                      ></div>
+                      <div
+                        className={cx(
+                          "sm:block hidden lg:absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full border-4 border-white shadow-xl z-20",
+                          !isRight && "lg:hidden",
+                        )}
+                      ></div>
 
                       <div
-                        className={`w-1/2 p${isRight ? "l" : "r"}-8 ${!isRight ? "text-right" : "text-left"}`}
+                        className={cx(
+                          "lg:w-1/2 w-full",
+                          isRight
+                            ? "sm:pl-8 text-left"
+                            : "lg:pr-8 lg:text-right sm:pl-8",
+                        )}
                       >
                         <div className="bg-white/95 backdrop-blur-sm text-black p-6 rounded-xl shadow-2xl border border-white/20 transition-all duration-300">
                           <div
@@ -304,8 +316,8 @@ const About = () => {
 
                       {!isRight && (
                         <>
-                          <div className="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full border-4 border-white shadow-xl z-20"></div>
-                          <div className="w-1/2 pl-8"></div>
+                          <div className="lg:absolute lg:block hidden left-1/2 transform -translate-x-1/2 w-6 h-6 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full border-4 border-white shadow-xl z-20"></div>
+                          <div className="lg:block hidden lg:w-1/2 pl-8"></div>
                         </>
                       )}
                     </div>
