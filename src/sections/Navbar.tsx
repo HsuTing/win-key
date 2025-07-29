@@ -71,7 +71,7 @@ const Navbar = () => {
         </Link>
 
         <Link
-          className="inline-flex items-start flex-col justify-center ursor-pointer ml-4 cursor-pointer"
+          className="md:inline-flex hidden items-start flex-col justify-center ursor-pointer ml-4 cursor-pointer"
           to="home"
           smooth={true}
           offset={-80}
@@ -90,7 +90,7 @@ const Navbar = () => {
         {SECTIONS.map(({ section, items }) => (
           <Link
             key={section}
-            className="inline-flex p-4 content-center items-center flex-wrap border-b-4 border-b-transparent !text-pm-contrast hover:bg-pm-contrast/50 transition-colors ease-linear capitalize cursor-pointer relative"
+            className="sm:inline-flex hidden p-4 content-center items-center flex-wrap border-b-4 border-b-transparent !text-pm-contrast hover:bg-pm-contrast/50 transition-colors ease-linear capitalize cursor-pointer relative"
             to={items ? "" : section}
             smooth={true}
             offset={-80}
@@ -171,6 +171,81 @@ const Navbar = () => {
                 {title}
               </a>
             ))}
+          </div>
+        </button>
+
+        <button className="sm:hidden block group relative p-4 w-16 h-20 !bg-transparent">
+          <Icons.Menu className="text-pm-contrast cursor-pointer" />
+
+          <div className="hidden group-focus-within:block absolute right-0 my-4 w-44 overflow-hidden bg-white z-10 divide-y divide-gray-100 rounded shadow">
+            {SECTIONS.map(({ section, items }) =>
+              !items ? (
+                <Link
+                  key={section}
+                  className="flex items-center space-x-3 px-4 py-2 text-pm-dark whitespace-nowrap"
+                  to={section}
+                  smooth={true}
+                  offset={-80}
+                  duration={500}
+                >
+                  <span>{t(section)}</span>
+                </Link>
+              ) : (
+                <div
+                  key={section}
+                  className={
+                    {
+                      about: "group/about",
+                      business: "group/business",
+                    }[section]
+                  }
+                >
+                  <div className="flex items-center justify-between cursor-pointer block px-4 py-2 text-pm-dark">
+                    <div>{t(section)}</div>
+
+                    <Icons.ChevronDown
+                      className={
+                        {
+                          about:
+                            "w-5 h-5 group-hover/about:rotate-180 transition-transform duration-300",
+                          business:
+                            "w-5 h-5 group-hover/business:rotate-180 transition-transform duration-300",
+                        }[section]
+                      }
+                    />
+                  </div>
+
+                  <div
+                    className={
+                      {
+                        about:
+                          "flex flex-col max-h-0 overflow-hidden group-hover/about:max-h-80 transition-all duration-300 ease-in-out",
+                        business:
+                          "flex flex-col max-h-0 overflow-hidden group-hover/business:max-h-80 transition-all duration-300 ease-in-out",
+                      }[section]
+                    }
+                  >
+                    {items.map((item) => {
+                      const Icon = icons[item];
+                      return (
+                        <Link
+                          key={item}
+                          className="flex items-center space-x-3 px-4 py-2 text-gray-700 hover:bg-[#005e9e]/10 transition-colors whitespace-nowrap"
+                          to={item}
+                          smooth={true}
+                          offset={-80}
+                          duration={500}
+                        >
+                          <Icon className="w-4 h-4 text-[#005e9e]" />
+
+                          <span>{t(item)}</span>
+                        </Link>
+                      );
+                    })}
+                  </div>
+                </div>
+              ),
+            )}
           </div>
         </button>
       </div>
