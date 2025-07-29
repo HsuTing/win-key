@@ -108,8 +108,10 @@ const Business = () => {
                 >
                   <Image
                     src={image}
-                    className="absolute inset-0 bg-cover bg-center transition-transform duration-300 group-hover:scale-105"
+                    className="absolute inset-0 transition-transform duration-300 group-hover:scale-105"
                     alt={name}
+                    style={{ objectFit: "cover" }}
+                    fill
                   />
                   <div className="absolute inset-0 bg-gradient-to-br from-blue-900/90 via-blue-800/85 to-blue-700/80"></div>
                   <div className="relative p-8 text-white h-full flex flex-col">
