@@ -35,7 +35,7 @@ const Home = () => {
     <Element name="home">
       <section
         id="home"
-        className="relative min-h-screen flex items-center justify-center overflow-hidden"
+        className="relative min-h-screen md:flex items-center justify-center overflow-hidden pt-[120px] lg:pb-[40px] pb-[120px]"
       >
         <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-[#005e9e]">
           <div className="absolute inset-0 bg-black/40"></div>
@@ -45,12 +45,12 @@ const Home = () => {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-white">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
-              <h2 className="text-4xl lg:text-5xl font-bold mb-8 leading-tight text-left">
+              <h2 className="text-5xl font-bold mb-8 leading-tight text-left">
                 {t("title")}
               </h2>
 
               <div className="max-w-3xl mb-12">
-                <p className="text-lg lg:text-xl text-gray-200 leading-relaxed text-left">
+                <p className="text-xl text-gray-200 leading-relaxed text-left">
                   {t("subtitle")
                     .split("\n")
                     .map((line, index, lines) => (
@@ -63,7 +63,7 @@ const Home = () => {
                 </p>
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex flex-row gap-4">
                 <Link to="contact" smooth={true} offset={-80} duration={500}>
                   <button className="bg-[#005e9e] hover:bg-[#004a7f] text-white px-8 py-4 rounded-lg font-semibold transition-colors flex items-center justify-center space-x-2">
                     <span>{t("cta")}</span>
@@ -79,7 +79,7 @@ const Home = () => {
               </div>
             </div>
 
-            <div className="flex justify-end">
+            <div className="flex lg:justify-end justify-center">
               <div className="relative w-full max-w-lg">
                 <h3 className="text-2xl font-bold text-white mb-6 text-center">
                   {t("slideTitle")}
