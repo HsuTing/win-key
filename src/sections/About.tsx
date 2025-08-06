@@ -55,12 +55,11 @@ const AFFILIATED_COMPANIES = [
     name: "允興(泰國)股份有限公司",
     logo: winSingThaiLogo,
     noFax: true,
-    noTaxId: true,
   },
 ];
 
 const About = () => {
-  const { t } = useTranslation(["about", "translation"]);
+  const { t, i18n } = useTranslation(["about", "translation"]);
 
   return (
     <Element name="about">
@@ -335,60 +334,63 @@ const About = () => {
 
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {AFFILIATED_COMPANIES.map(
-                ({ name, logo, noFax, noTaxId }, index) => (
-                  <div key={name} className="space-y-4">
-                    <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow min-h-[280px] flex flex-col">
-                      <div className="flex items-center mb-4">
-                        <Icons.Company className="h-8 w-8 mr-3 text-pm-dark" />
+              {AFFILIATED_COMPANIES.map(({ name, logo, noFax }, index) => (
+                <div key={name} className="space-y-4">
+                  <div
+                    className={cx(
+                      "bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow flex flex-col",
+                      i18n.language === "zh-TW"
+                        ? "min-h-[280px]"
+                        : "min-h-[320px]",
+                    )}
+                  >
+                    <div className="flex items-center mb-4">
+                      <Icons.Company className="h-8 w-8 mr-3 text-pm-dark" />
 
-                        <h3 className="text-xl font-semibold text-gray-900">
-                          {t(`affiliates.${index}.name`)}
-                        </h3>
-                      </div>
-                      <div className="space-y-3 text-gray-600 flex-grow">
-                        <div className="flex items-start">
-                          <Icons.MapPin className="h-5 w-5 text-gray-400 mr-2 mt-0.5 flex-shrink-0" />
-                          <div className="flex items-center gap-2">
-                            <span>{t(`affiliates.${index}.address`)}</span>
-                            <a
-                              href={t(`affiliates.${index}.address-link`)}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="text-blue-600 hover:text-blue-800 transition-colors"
-                            >
-                              <Icons.ExternalLink className="h-4 w-4" />
-                            </a>
-                          </div>
-                        </div>
-                        <div className="flex items-center">
-                          <Icons.Phone className="h-5 w-5 text-gray-400 mr-2" />
-                          <span>{t(`affiliates.${index}.phone`)}</span>
-                        </div>
-                        {!noFax && (
-                          <div className="flex items-center">
-                            <Icons.Fax className="h-5 w-5 text-gray-400 mr-2" />
-                            <span>{t(`affiliates.${index}.fax`)}</span>
-                          </div>
-                        )}
-                        {!noTaxId && (
-                          <div className="text-sm text-gray-500">
-                            {t(`affiliates.${index}.taxId`)}
-                          </div>
-                        )}
-                      </div>
+                      <h3 className="text-xl font-semibold text-gray-900">
+                        {t(`affiliates.${index}.name`)}
+                      </h3>
                     </div>
-                    {/* Photo Container */}
-                    <div className="bg-gray-100 rounded-xl p-6 min-h-[200px] flex items-center justify-center">
-                      <Image
-                        src={logo}
-                        alt={name}
-                        className="max-w-full max-h-full"
-                      />
+                    <div className="space-y-3 text-gray-600 flex-grow">
+                      <div className="flex items-start">
+                        <Icons.MapPin className="h-5 w-5 text-gray-400 mr-2 mt-0.5 flex-shrink-0" />
+                        <div className="flex items-center gap-2">
+                          <span>{t(`affiliates.${index}.address`)}</span>
+                          <a
+                            href={t(`affiliates.${index}.address-link`)}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-blue-600 hover:text-blue-800 transition-colors"
+                          >
+                            <Icons.ExternalLink className="h-4 w-4" />
+                          </a>
+                        </div>
+                      </div>
+                      <div className="flex items-center">
+                        <Icons.Phone className="h-5 w-5 text-gray-400 mr-2" />
+                        <span>{t(`affiliates.${index}.phone`)}</span>
+                      </div>
+                      {!noFax && (
+                        <div className="flex items-center">
+                          <Icons.Fax className="h-5 w-5 text-gray-400 mr-2" />
+                          <span>{t(`affiliates.${index}.fax`)}</span>
+                        </div>
+                      )}
+                      <div className="text-sm text-gray-500">
+                        {t(`affiliates.${index}.taxId`)}
+                      </div>
                     </div>
                   </div>
-                ),
-              )}
+                  {/* Photo Container */}
+                  <div className="bg-gray-100 rounded-xl p-6 min-h-[200px] flex items-center justify-center">
+                    <Image
+                      src={logo}
+                      alt={name}
+                      className="max-w-full max-h-full"
+                    />
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </section>
