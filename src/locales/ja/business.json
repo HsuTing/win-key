@@ -34,7 +34,7 @@
       ]
     },
     {
-      "name": "",
+      "name": "---",
       "description": "合法的廃棄物処理の海外委託受付",
       "items": [
         { "title": "メッキ液、スラッジ" },
@@ -44,8 +44,8 @@
       ]
     },
     {
-      "name": "",
-      "description": "",
+      "name": "---",
+      "description": "---",
       "items": [
         {
           "title": "資源リサイクル"
@@ -67,38 +67,38 @@
       "「永続的な発展目標」（Sustainable Development Goals, SDGs）は、国連が2015年に発表した方針で、17の永続的な発展目標と169の追跡指標を策定し、世界の政府、民間企業および非営利組織が経済繁栄を促進すると同時に地球を保護するための長期的な目標と永続的な発展の使命を定める基準を提供します。",
       "当社は、再生資源リサイクル企業として、SDGsの根本的理念に応じ、運営方針に組み込むことで、循環的な社会形成を促進しています。今後とも、経済発展、環境保全、社会活動のバランスを取り、グローバルな課題の改善に貢献する企業になるよう、パートナーと積極的に取り組んでまいります。"
     ],
-    "target": "",
+    "target": "---",
     "6": {
-      "title": "",
-      "description": ""
+      "title": "安全な水とトイレを世界に",
+      "description": "---"
     },
     "7": {
-      "title": "",
-      "description": ""
+      "title": "エネルギーをみんなに　そしてクリーンに",
+      "description": "---"
     },
     "8": {
-      "title": "",
-      "description": ""
+      "title": "働きがいも　経済成長も",
+      "description": "---"
     },
     "9": {
-      "title": "",
-      "description": ""
+      "title": "産業と技術革新の基盤をつくろう",
+      "description": "---"
     },
     "11": {
-      "title": "",
-      "description": ""
+      "title": "つくる責任　つかう責任",
+      "description": "---"
     },
     "12": {
-      "title": "",
-      "description": ""
+      "title": "気候変動に具体的な対策を",
+      "description": "---"
     },
     "13": {
-      "title": "",
-      "description": ""
+      "title": "パートナーシップで目標を達成しよう",
+      "description": "---"
     },
     "17": {
-      "title": "",
-      "description": ""
+      "title": "---",
+      "description": "---"
     }
   }
 }
