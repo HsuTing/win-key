@@ -5,8 +5,8 @@ import { useTranslation } from "react-i18next";
 
 const INFO = [
   { title: "ceo", info: "莊百慶" },
-  { title: "TEL", info: "049-2522313", href: "tel:0492522313" },
-  { title: "FAX", info: "049-2510477", href: "fax:049-2510477" },
+  { title: "TEL", info: "phone", href: "phone-link" },
+  { title: "FAX", info: "fax", href: "fax-link" },
   {
     title: "EMAIL",
     info: "winsingjp@gmail.com",
@@ -28,7 +28,7 @@ const Footer = () => {
                 <React.Fragment key={title}>
                   <span className="opacity-75 font-light">{t(title)}</span>
                   {href ? (
-                    <a className="!text-inherit hover:underline" href={href}>
+                    <a className="!text-inherit hover:underline" href={t(href)}>
                       {t(info)}
                     </a>
                   ) : (
