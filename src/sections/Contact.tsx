@@ -69,16 +69,33 @@ const Contact = () => {
               required
             />
 
-            <label
-              htmlFor={`${id}-policy`}
-              className="cursor-pointer select-none"
-            >
-              {t("agreePolicy.0")}
-            </label>
+            {i18n.language === "ja" ? (
+              <>
+                <a href={`/privacyPolicy/${i18n.language}.pdf`} target="_blank">
+                  {t("agreePolicy.0")}
+                </a>
 
-            <a href={`/privacyPolicy/${i18n.language}.pdf`} target="_blank">
-              {t("agreePolicy.1")}
-            </a>
+                <label
+                  htmlFor={`${id}-policy`}
+                  className="cursor-pointer select-none"
+                >
+                  {t("agreePolicy.1")}
+                </label>
+              </>
+            ) : (
+              <>
+                <label
+                  htmlFor={`${id}-policy`}
+                  className="cursor-pointer select-none"
+                >
+                  {t("agreePolicy.0")}
+                </label>
+
+                <a href={`/privacyPolicy/${i18n.language}.pdf`} target="_blank">
+                  {t("agreePolicy.1")}
+                </a>
+              </>
+            )}
           </div>
           <button type="submit" className="btn">
             {t("submit")}
