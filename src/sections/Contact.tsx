@@ -42,9 +42,10 @@ const Contact = () => {
       >
         <div className="flex flex-col gap-2 flex-1">
           {t("introduction")}
-          <a href="tel:+0492522313" className="inline-flex">
+          <a href={t("contact-phone-link")} className="inline-flex">
             <Icons.Phone className="mr-2 aspect-square w-4" />
-            +0492522313
+
+            {t("contact-phone")}
           </a>
           <a href="mailto:winsingjp@gmail.com" className="inline-flex">
             <Icons.Mail className="mr-2 aspect-square w-4" />
