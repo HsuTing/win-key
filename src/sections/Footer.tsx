@@ -50,7 +50,7 @@ const Footer = () => {
         />
       </div>
       <div className="py-8 bg-pm text-center">
-        ©Win Key Recycle Industry Corp. All rights reserved.
+        ©Win Key Recycle Industrial Corp. All rights reserved.
       </div>
     </footer>
   );

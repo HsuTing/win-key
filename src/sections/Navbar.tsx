@@ -81,7 +81,7 @@ const Navbar = () => {
             允基企業有限公司
           </span>
           <span className="text-sm text-white/80 font-medium">
-            Win Key Recycle Industry Corp.
+            Win Key Recycle Industrial Corp.
           </span>
         </Link>
 
