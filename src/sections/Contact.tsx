@@ -9,6 +9,7 @@ import Icons from "@/components/Icons";
 import { sendForm } from "@/utils/form";
 import Input from "@/components/inputs/Input";
 import Textarea from "@/components/inputs/Textarea";
+import cx from "classnames";
 
 const Contact = () => {
   const { t, i18n } = useTranslation(["contact", "translation"]);
@@ -87,7 +88,10 @@ const Contact = () => {
               <>
                 <label
                   htmlFor={`${id}-policy`}
-                  className="cursor-pointer select-none"
+                  className={cx(
+                    "cursor-pointer select-none",
+                    i18n.language === "en" && "mr-1",
+                  )}
                 >
                   {t("agreePolicy.0")}
                 </label>

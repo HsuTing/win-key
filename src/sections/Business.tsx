@@ -14,6 +14,7 @@ import waste from "@/images/business/businesses/waste.jpg";
 import winKey from "@/images/business/licenses/winKey.jpg";
 import clearPermission from "@/images/business/licenses/clearPermission.jpg";
 import renewableResources from "@/images/business/businesses/renewable-resources.jpg";
+import cx from "classnames";
 
 const BUSINESSES = [
   {
@@ -86,7 +87,7 @@ const LICENSES = [
 ];
 
 const Business = () => {
-  const { t } = useTranslation(["business", "translation"]);
+  const { t, i18n } = useTranslation(["business", "translation"]);
 
   return (
     <>
@@ -104,7 +105,10 @@ const Business = () => {
               {BUSINESSES.map(({ name, image, items }, index) => (
                 <div
                   key={name}
-                  className="relative bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow group h-96"
+                  className={cx(
+                    "relative bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow group h-96",
+                    i18n.language === "en" && index > 1 && "h-[28rem]",
+                  )}
                 >
                   <Image
                     src={image}
