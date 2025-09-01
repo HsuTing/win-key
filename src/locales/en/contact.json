@@ -1,1 +1,15 @@
-{}
+{
+  "introduction": "You can ask us your question via the contact form below, or contact us by phone or email. We will reply you as soon as possible.",
+  "contact-phone-link": "tel:+8864-9252-2313",
+  "contact-phone": "+8864-9252-2313",
+  "name": "name",
+  "email": "email",
+  "companyName": "company name",
+  "phone": "phone",
+  "content": "message",
+  "agreePolicy": ["I have read and agree to the ", "Privacy Policy"],
+  "submit": "Submit",
+  "sucess": "Your message was sent successfully.",
+  "error": "Something is wrong. Check if there was no problem, or try later, please."
+}
+

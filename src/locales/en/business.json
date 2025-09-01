@@ -1,1 +1,105 @@
-{}
+{
+  "business-content": [
+    {
+      "name": "Metals",
+      "description": "Engaged in processing and trading services of various non-ferrous metals",
+      "items": [
+        {
+          "title": "Non-Ferrous Metals",
+          "description": "Copper, Tin, Zinc, Lead, Nickel, Aluminum"
+        },
+        {
+          "title": "Precious Metals",
+          "description": "Gold, silver, palladium, platinum, etc."
+        },
+        {
+          "title": "Rare Metals, Rare Earths",
+          "description": "Various rare and rare earth metal materials"
+        }
+      ]
+    },
+    {
+      "name": "Plastics",
+      "description": "Provide professional processing services for various types of plastic materials",
+      "items": [
+        {
+          "title": "PP"
+        },
+        {
+          "title": "PE"
+        },
+        {
+          "title": "Others"
+        }
+      ]
+    },
+    {
+      "name": "General and hazardous industrial waste",
+      "description": "Legally accept overseas waste disposal and promote the international circular economy",
+      "items": [
+        { "title": "Electroplating solution, Sludge" },
+        { "title": "Furnace slag, Catalysts" },
+        { "title": "Scrap, Dust" },
+        { "title": "Wire, Parts" }
+      ]
+    },
+    {
+      "name": "Renewable Resources International Trading",
+      "description": "Committed to promoting a regenerative circular economy and achieving sustainable resource utilization",
+      "items": [
+        {
+          "title": "Waste Recycling"
+        },
+        {
+          "title": "Resource Reuse"
+        },
+        {
+          "title": "Environmental Protection"
+        },
+        {
+          "title": "Sustainable Development"
+        }
+      ]
+    }
+  ],
+  "sdgs": {
+    "description": [
+      "The Sustainable Development Goals (SDGs) are a set of 17 sustainable development goals and 169 indicators announced by the United Nations in 2015. They provide a framework for governments, private businesses, and non-profit organizations worldwide to set long-term goals and sustainable development missions to promote economic prosperity while protecting the planet.",
+      "As a recycling company, our company supports and aligns with the core principles of the SDGs, incorporating them into our operational policies to promote a circular society. Going forward, we will continue to actively collaborate with our partners to achieve a balance between economic development, environmental protection, and social activism, aiming to contribute to addressing global sustainability issues."
+    ],
+    "target": "Our Key SDGs",
+    "6": {
+      "title": "CLEAN WATER AND SANITAION",
+      "description": "Through wastewater treatment technology, we ensure the sustainable use of water resources and reduce the impact of industrial wastewater on the environment."
+    },
+    "7": {
+      "title": "AFFORDABLE AND CLEAN ENERGY",
+      "description": "Promote the application of renewable energy, improve energy efficiency, reduce carbon footprint and promote green energy development."
+    },
+    "8": {
+      "title": "DECENT WORK AND ECONOMIC GROWTH",
+      "description": "Create high-quality jobs, promote inclusive economic growth, and enhance employee skills and well-being."
+    },
+    "9": {
+      "title": "INDUSTRY, INNOVTION, TECHNOLOGY AND INFRASTRUCTURE",
+      "description": "Promote circular economy innovation, build sustainable infrastructure, and promote industrial transformation and upgrading."
+    },
+    "11": {
+      "title": "SUSTAINBLE CITIES AND COMMUNITIES",
+      "description": "Through waste management, we help build sustainable cities and improve the quality of the community environment."
+    },
+    "12": {
+      "title": "RESPONSIBLE CONSUMPTION AND PRODUCTION",
+      "description": "Promote resource recycling, achieve responsible production models, and reduce waste generation."
+    },
+    "13": {
+      "title": "CLIMATE ACTION",
+      "description": "By reducing waste and recycling, we can lower greenhouse gas emissions and actively address the challenges of climate change."
+    },
+    "17": {
+      "title": "PARTNERSHIPS FOR THE GOALS",
+      "description": "Establish global partnerships to jointly achieve sustainable development goals and promote international cooperation."
+    }
+  }
+}
+

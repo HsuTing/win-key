@@ -4,7 +4,7 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 
 const INFO = [
-  { title: "ceo", info: "莊百慶" },
+  { title: "ceo", info: "ceo-name" },
   { title: "TEL", info: "phone", href: "phone-link" },
   { title: "FAX", info: "fax", href: "fax-link" },
   {

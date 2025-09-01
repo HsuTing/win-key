@@ -1,7 +1,58 @@
 {
   "ceoMessage": {
+    "content": "With rising environmental awareness and the urgent need for sustainable resource development, the waste management industry is facing unprecedented transformation and challenges. Since its founding, Win Key Recycle Industrial Corp. has consistently upheld the core values of \"Legality, Safety, Professionalism, Efficiency,\" striving to become the industry's most trusted environmental partner.\n\nWe firmly believe that waste is not just a burden, but a recyclable resource. Through advanced technology, rigorous processes, and compliant operations, we not only provide comprehensive removal and treatment services, but also actively promote resource recycling and reuse, practicing the spirit of a circular economy.\n\nWin Key holds a full range of licenses, and its services cover a wide range of non-ferrous metal processing, industrial waste treatment, and overseas waste collection. We are a practical practitioner combining legality and professionalism. We value every collaboration with our clients and even more so every commitment to the environment.\n\nGoing forward, we will continue to strengthen our technological capabilities, refine our management quality, and collaborate with industry, government, and academia to contribute to improving Taiwan's overall waste management efficiency and green competitiveness.\n\nWe sincerely thank all our partners for their long-term support and trust in Win Key. Let us work together towards a cleaner, more sustainable future.\n\nChairman of Win Key Recycle Industrial Corp.\nSincerely, Chuang Pai-Ching",
     "ceoName": "Chuang Pai-Ching",
     "ceoTitle": "Chairman, Win Key Recycle Industrial Corp."
+  },
+  "companyProfile": {
+    "companyInfoTitle": {
+      "name": "Name",
+      "established": "Founded",
+      "address": "Address",
+      "representative": "CEO",
+      "business": "Business",
+      "contact": "Contact Information",
+      "taxId": "Registration Number"
+    },
+    "companyInfo": {
+      "name": "Win Key Recycle Industrial Corp.",
+      "established": "November 21, 1995",
+      "address": "No. 205, Sec. 2, Fencao Rd., Fenyuan Township, Changhua County 502001, Taiwan",
+      "representative": "Chuang Pai-Ching",
+      "business": [
+        "Metal Manufacturing",
+        "Basic Chemical Industry",
+        "Waste Disposal"
+      ],
+      "contact": [
+        "TEL:+8864-9252-2313",
+        "FAX:+8864-9251-0477",
+        "EMAIL:winsingjp@gmail.com"
+      ],
+      "taxId": "16273391"
+    }
+  },
+  "history": {
+    "1971": {
+      "title": "The Beginning",
+      "description": "The father of the current CEO, Chuang Zong-Fu, started his own business, YongTai Enterprise Society, and began the waste metal recycling business."
+    },
+    "1995": {
+      "title": "Company Establishment",
+      "description": "Chuang Pai-Ching and his brothers and sisters jointly established \"Win Key Recycle Industrial Corp.\""
+    },
+    "2022": {
+      "title": "Group Expansion",
+      "description": "Established a holding company, Win Hsing Investment Co., Ltd., and Win More Environmental Protection Technology Co., Ltd. in Nangang Industrial Park, Nantou."
+    },
+    "2023": {
+      "title": "Overseas Investment",
+      "description": "Established Win Sing (Thailand) Co., Ltd. in Chachoengsao, Thailand"
+    },
+    "2025": {
+      "title": "International layout",
+      "description": "Established a business base in Osaka, Japan, \"Win More Japan Co., Ltd.\" (tentative name)"
+    }
   },
   "affiliates": [
     {
@@ -24,7 +75,7 @@
       "name": "Win Sing(Thailand) Co. Ltd",
       "address": "216/7 Moo.7, Hua Samrong, Plaeng Yao, Chachoengsao, 24190",
       "address-link": "https://maps.google.com/?q=216/7 Moo.7, Hua Samrong, Plaeng Yao, Chachoengsao, 24190",
-      "phone": "+8669-2299-4536",
+      "phone": "+669-2299-4536",
       "taxId": "Business Account Number: 0105566090817"
     }
   ]
