@@ -174,7 +174,9 @@ const About = () => {
                         </td>
                         <td className="px-6 py-4 text-gray-700">
                           <div className="space-y-1">
-                            {Array.from({ length: 4 }).map((_, index) => (
+                            {Array.from({
+                              length: i18n.language === "en" ? 3 : 4,
+                            }).map((_, index) => (
                               <div
                                 key={index}
                                 className="flex items-center space-x-2"
