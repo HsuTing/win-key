@@ -2,7 +2,7 @@ const FORM_ID = "1FAIpQLSfnFfKY9k1q0bn9D4OXoOBuiadT4ym5E3EFaCxZsa4j14qG2Q";
 const FIELDS = {
   name: "entry.1933057890",
   company: "entry.639469539",
-  email: "entry.1574557020",
+  email: "entry.1801198935",
   tel: "entry.1578762008",
   content: "entry.473236620",
 } as Record<string, string>;
