@@ -1,5 +1,5 @@
 "use client";
-import React, { FormEvent, useId, useState } from "react";
+import React, { FormEvent, useId, useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { Element } from "react-scroll";
 import Banner from "@/components/Banner";
@@ -30,6 +30,14 @@ const Contact = () => {
       alert(t("error"));
     }
   }
+
+  useEffect(() => {
+    if (status !== 'done') return
+
+    const timeout = setTimeout(setStatus, 3000, "idle");
+
+    return () => clearTimeout(timeout);
+  }, [status]);
 
   return (
     <Element name="contact">
