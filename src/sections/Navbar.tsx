@@ -1,10 +1,12 @@
 "use client";
-import React, { useRef } from "react";
+import React, { useRef, useCallback } from "react";
 import i18n from "i18next";
 import { useTranslation } from "react-i18next";
 import cx from "classnames";
-import { Link } from "react-scroll";
+import { scroller } from "react-scroll";
 import Image from "next/image";
+import Link from "next/link";
+import { usePathname, useRouter } from "next/navigation";
 import Icons from "@/components/Icons";
 import logo from "@/images/logo.jpg";
 
@@ -20,6 +22,8 @@ const icons = {
 
 const Navbar = () => {
   const { t } = useTranslation();
+  const pathname = usePathname();
+  const router = useRouter();
 
   const SECTIONS = [
     {
@@ -32,6 +36,9 @@ const Navbar = () => {
     },
     {
       section: "contact",
+    },
+    {
+      section: "recruit",
     },
   ];
   const LANGUAGE = [
@@ -56,26 +63,36 @@ const Navbar = () => {
 
   const [secionOption, setSecionOption] = React.useState<null | string>(null);
   const timeoutRef = useRef<ReturnType<typeof setTimeout>>();
+  const goTo = useCallback(
+    (target, disableScroll) => {
+      if (pathname !== `/${i18n.language}`) router.push(`/${i18n.language}`);
+
+      if (disableScroll) return;
+
+      setTimeout(() => {
+        scroller.scrollTo(target, {
+          smooth: true,
+          offset: -80,
+          duration: 500,
+        });
+      }, 500);
+    },
+    [pathname, i18n],
+  );
 
   return (
     <nav className="fixed top-0 left-0 right-0 bg-pm-dark border-gray-200 z-50 drop-shadow-lg">
       <div className="flex max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <Link
+        <div
           className="relative w-20 h-20 cursor-pointer"
-          to="home"
-          smooth={true}
-          offset={-80}
-          duration={500}
+          onClick={() => goTo("home", false)}
         >
           <Image src={logo} alt="logo" fill />
-        </Link>
+        </div>
 
-        <Link
+        <div
           className="md:inline-flex hidden items-start flex-col justify-center ursor-pointer ml-4 cursor-pointer"
-          to="home"
-          smooth={true}
-          offset={-80}
-          duration={500}
+          onClick={() => goTo("home", false)}
         >
           <span className="text-3xl font-bold text-white hover:text-white/90 transition-colors">
             允基企業有限公司
@@ -83,18 +100,14 @@ const Navbar = () => {
           <span className="text-sm text-white/80 font-medium">
             Win Key Recycle Industrial Corp.
           </span>
-        </Link>
+        </div>
 
         <div className="grow" />
 
         {SECTIONS.map(({ section, items }) => (
-          <Link
+          <div
             key={section}
             className="sm:inline-flex hidden p-4 content-center items-center flex-wrap border-b-4 border-b-transparent !text-pm-contrast hover:bg-pm-contrast/50 transition-colors ease-linear capitalize cursor-pointer relative"
-            to={items ? "" : section}
-            smooth={true}
-            offset={-80}
-            duration={500}
             onMouseEnter={() => {
               if (!items) return;
 
@@ -106,6 +119,11 @@ const Navbar = () => {
 
               clearTimeout(timeoutRef.current);
               timeoutRef.current = setTimeout(setSecionOption, 300, null);
+            }}
+            onClick={() => {
+              if (section === "recruit")
+                router.push(`/${section}/${i18n.language}`);
+              else goTo(section, !!items);
             }}
           >
             {t(section)}
@@ -132,24 +150,23 @@ const Navbar = () => {
                   const Icon = icons[item];
 
                   return (
-                    <Link
+                    <div
                       key={item}
                       className="flex items-center space-x-3 px-4 py-2 text-gray-700 hover:bg-[#005e9e]/10 transition-colors whitespace-nowrap"
-                      to={item}
-                      smooth={true}
-                      offset={-80}
-                      duration={500}
-                      onClick={() => setSecionOption(null)}
+                      onClick={() => {
+                        setSecionOption(null);
+                        goTo(item, false);
+                      }}
                     >
                       <Icon className="w-4 h-4 text-[#005e9e]" />
 
                       <span>{t(item)}</span>
-                    </Link>
+                    </div>
                   );
                 })}
               </div>
             )}
-          </Link>
+          </div>
         ))}
 
         <button className="group relative p-4 w-16 h-20 !bg-transparent">
@@ -180,16 +197,17 @@ const Navbar = () => {
           <div className="hidden group-focus-within:block absolute right-0 my-4 w-44 overflow-hidden bg-white z-10 divide-y divide-gray-100 rounded shadow">
             {SECTIONS.map(({ section, items }) =>
               !items ? (
-                <Link
+                <div
                   key={section}
                   className="flex items-center space-x-3 px-4 py-2 text-pm-dark whitespace-nowrap"
-                  to={section}
-                  smooth={true}
-                  offset={-80}
-                  duration={500}
+                  onClick={() => {
+                    if (section === "recruit")
+                      router.push(`/${section}/${i18n.language}`);
+                    else goTo(section, false);
+                  }}
                 >
                   <span>{t(section)}</span>
-                </Link>
+                </div>
               ) : (
                 <div
                   key={section}
@@ -227,19 +245,17 @@ const Navbar = () => {
                   >
                     {items.map((item) => {
                       const Icon = icons[item];
+
                       return (
-                        <Link
+                        <div
                           key={item}
                           className="flex items-center space-x-3 px-4 py-2 text-gray-700 hover:bg-[#005e9e]/10 transition-colors whitespace-nowrap"
-                          to={item}
-                          smooth={true}
-                          offset={-80}
-                          duration={500}
+                          onClick={() => goTo(item, false)}
                         >
                           <Icon className="w-4 h-4 text-[#005e9e]" />
 
                           <span>{t(item)}</span>
-                        </Link>
+                        </div>
                       );
                     })}
                   </div>

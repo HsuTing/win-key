@@ -14,7 +14,7 @@ const Recruit = () => {
         <Title>{t("translation:recruit")}</Title>
       </div>
 
-      <div className="max-w-3xl mx-auto mb-12">
+      <div className="max-w-3xl mx-auto mb-12 px-4">
         <p className="text-xl leading-relaxed text-left">
           {t("content")
             .split("\n")
