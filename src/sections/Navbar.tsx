@@ -171,7 +171,7 @@ const Navbar = () => {
 
         <button className="group relative p-4 w-16 h-20 !bg-transparent">
           <Icons.Globe className="text-pm-contrast cursor-pointer" />
-          <div className="hidden group-focus-within:block absolute right-0 my-4 w-44 overflow-hidden bg-white z-10 divide-y divide-gray-100 rounded shadow">
+          <div className="hidden group-hover:block absolute right-0 my-4 w-44 overflow-hidden bg-white z-10 divide-y divide-gray-100 rounded shadow">
             {LANGUAGE.map(({ title, code }) => (
               <a
                 key={code}
@@ -194,7 +194,7 @@ const Navbar = () => {
         <button className="sm:hidden block group relative p-4 w-16 h-20 !bg-transparent">
           <Icons.Menu className="text-pm-contrast cursor-pointer" />
 
-          <div className="hidden group-focus-within:block absolute right-0 my-4 w-44 overflow-hidden bg-white z-10 divide-y divide-gray-100 rounded shadow">
+          <div className="hidden group-hover:block absolute right-0 my-4 w-44 overflow-hidden bg-white z-10 divide-y divide-gray-100 rounded shadow">
             {SECTIONS.map(({ section, items }) =>
               !items ? (
                 <div
