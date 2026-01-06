@@ -32,7 +32,7 @@ const Contact = () => {
   }
 
   useEffect(() => {
-    if (status !== 'done') return
+    if (status !== "done") return;
 
     const timeout = setTimeout(setStatus, 3000, "idle");
 

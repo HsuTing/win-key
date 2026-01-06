@@ -4,6 +4,7 @@ import home from "./home.json";
 import business from "./business.json";
 import contact from "./contact.json";
 import footer from "./footer.json";
+import recruit from "./recruit.json";
 
 const locales = {
   translation,
@@ -12,6 +13,7 @@ const locales = {
   business,
   contact,
   footer,
+  recruit,
 };
 
 export default locales;
