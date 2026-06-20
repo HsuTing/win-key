@@ -54,7 +54,6 @@ const AFFILIATED_COMPANIES = [
   {
     name: "允興(泰國)股份有限公司",
     logo: winSingThaiLogo,
-    noFax: true,
   },
 ];
 
@@ -336,7 +335,7 @@ const About = () => {
 
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {AFFILIATED_COMPANIES.map(({ name, logo, noFax }, index) => (
+              {AFFILIATED_COMPANIES.map(({ name, logo }, index) => (
                 <div key={name} className="space-y-4">
                   <div
                     className={cx(
@@ -372,7 +371,7 @@ const About = () => {
                         <Icons.Phone className="h-5 w-5 text-gray-400 mr-2" />
                         <span>{t(`affiliates.${index}.phone`)}</span>
                       </div>
-                      {!noFax && (
+                      {i18n.exists(`affiliates.${index}.fax`, { ns: "about" }) && (
                         <div className="flex items-center">
                           <Icons.Fax className="h-5 w-5 text-gray-400 mr-2" />
                           <span>{t(`affiliates.${index}.fax`)}</span>
