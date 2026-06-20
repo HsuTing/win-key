@@ -44,9 +44,11 @@ This project is indexed by GitNexus as **win-key** (186 symbols, 226 relationshi
 
 ## Deployment
 
-網站部署至 `www.win-key.co`（GitHub Pages）。PR 合併後執行：
+Site is deployed to `www.win-key.co` via GitHub Pages. After merging a PR, run:
 
 ```bash
+gh poi
+git pull
 nix-shell -p nodejs yarn --run "yarn build"
 nix-shell -p nodejs yarn --run "yarn gh-pages"
 ```
