@@ -54,7 +54,6 @@ const AFFILIATED_COMPANIES = [
   {
     name: "允興(泰國)股份有限公司",
     logo: winSingThaiLogo,
-    noFax: true,
   },
 ];
 
