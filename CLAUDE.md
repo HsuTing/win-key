@@ -41,3 +41,12 @@ This project is indexed by GitNexus as **win-key** (186 symbols, 226 relationshi
 | Index, status, clean, wiki CLI commands | `.claude/skills/gitnexus/gitnexus-cli/SKILL.md` |
 
 <!-- gitnexus:end -->
+
+## Deployment
+
+網站部署至 `www.win-key.co`（GitHub Pages）。PR 合併後執行：
+
+```bash
+nix-shell -p nodejs yarn --run "yarn build"
+nix-shell -p nodejs yarn --run "yarn gh-pages"
+```
