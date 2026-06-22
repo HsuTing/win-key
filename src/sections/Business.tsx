@@ -306,7 +306,7 @@ const Business = () => {
                         <Image src={image} className="h-full" alt={t(nameKey)} />
                       </div>
                     </a>
-                    <p className="text-center text-sm font-normal text-gray-700">
+                    <p className="text-center font-normal text-gray-700">
                       {t(nameKey)}
                     </p>
                   </div>
