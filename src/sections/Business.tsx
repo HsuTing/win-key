@@ -13,6 +13,7 @@ import plastic from "@/images/business/businesses/plastic.jpg";
 import waste from "@/images/business/businesses/waste.jpg";
 import winKey from "@/images/business/licenses/winKey.jpg";
 import clearPermission from "@/images/business/licenses/clearPermission.jpg";
+import thailandLicense from "@/images/business/licenses/thailandLicense.jpg";
 import renewableResources from "@/images/business/businesses/renewable-resources.jpg";
 import cx from "classnames";
 
@@ -79,10 +80,17 @@ const LICENSES = [
   {
     image: winKey,
     pdf: "/licenses/winKey.pdf",
+    nameKey: "licenses.0.name",
   },
   {
     image: clearPermission,
     pdf: "/licenses/clearPermission.pdf",
+    nameKey: "licenses.1.name",
+  },
+  {
+    image: thailandLicense,
+    pdf: "/licenses/thailandLicense.pdf",
+    nameKey: "licenses.2.name",
   },
 ];
 
@@ -277,27 +285,31 @@ const Business = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <Title>{t("translation:license")}</Title>
 
-            <div className="max-w-4xl mx-auto">
-              <div className="grid md:grid-cols-2 gap-8">
-                {LICENSES.map(({ image, pdf }) => (
-                  <a
-                    key={pdf}
-                    className="relative"
-                    style={{ aspectRatio: "210/297" }}
-                    href={pdf}
-                    target="_blank"
-                  >
-                    <div className="absolute inset-0 bg-gradient-to-br from-amber-100 via-amber-50 to-yellow-50 rounded-lg shadow-2xl border-8 border-amber-200">
-                      <div className="absolute inset-4 border-4 border-double border-amber-400 rounded-md">
-                        <div className="absolute -top-2 -left-2 w-4 h-4 bg-amber-300 rotate-45 border border-amber-400"></div>
-                        <div className="absolute -top-2 -right-2 w-4 h-4 bg-amber-300 rotate-45 border border-amber-400"></div>
-                        <div className="absolute -bottom-2 -left-2 w-4 h-4 bg-amber-300 rotate-45 border border-amber-400"></div>
-                        <div className="absolute -bottom-2 -right-2 w-4 h-4 bg-amber-300 rotate-45 border border-amber-400"></div>
-                      </div>
+            <div className="max-w-5xl mx-auto">
+              <div className="grid md:grid-cols-3 gap-8">
+                {LICENSES.map(({ image, pdf, nameKey }) => (
+                  <div key={pdf} className="flex flex-col items-center gap-4">
+                    <a
+                      className="relative w-full"
+                      style={{ aspectRatio: "210/297" }}
+                      href={pdf}
+                      target="_blank"
+                    >
+                      <div className="absolute inset-0 bg-gradient-to-br from-amber-100 via-amber-50 to-yellow-50 rounded-lg shadow-2xl border-8 border-amber-200">
+                        <div className="absolute inset-4 border-4 border-double border-amber-400 rounded-md">
+                          <div className="absolute -top-2 -left-2 w-4 h-4 bg-amber-300 rotate-45 border border-amber-400"></div>
+                          <div className="absolute -top-2 -right-2 w-4 h-4 bg-amber-300 rotate-45 border border-amber-400"></div>
+                          <div className="absolute -bottom-2 -left-2 w-4 h-4 bg-amber-300 rotate-45 border border-amber-400"></div>
+                          <div className="absolute -bottom-2 -right-2 w-4 h-4 bg-amber-300 rotate-45 border border-amber-400"></div>
+                        </div>
 
-                      <Image src={image} className="h-full" alt={pdf} />
-                    </div>
-                  </a>
+                        <Image src={image} className="h-full" alt={t(nameKey)} />
+                      </div>
+                    </a>
+                    <p className="text-center font-normal text-gray-700">
+                      {t(nameKey)}
+                    </p>
+                  </div>
                 ))}
               </div>
             </div>
