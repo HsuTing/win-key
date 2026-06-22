@@ -55,6 +55,10 @@ const AFFILIATED_COMPANIES = [
     name: "允興(泰國)股份有限公司",
     logo: winSingThaiLogo,
   },
+  {
+    name: "允貿日本株式会社",
+    logo: winMoreLogo,
+  },
 ];
 
 const About = () => {
@@ -334,61 +338,54 @@ const About = () => {
           <Title>{t("translation:affiliates")}</Title>
 
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="space-y-6">
               {AFFILIATED_COMPANIES.map(({ name, logo }, index) => (
-                <div key={name} className="space-y-4">
-                  <div
-                    className={cx(
-                      "bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow flex flex-col",
-                      i18n.language === "zh-TW"
-                        ? "min-h-[280px]"
-                        : "min-h-[320px]",
-                    )}
-                  >
-                    <div className="flex items-center mb-4">
-                      <Icons.Company className="h-8 w-8 mr-3 text-pm-dark" />
+                <div
+                  key={name}
+                  className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow flex items-center gap-8 p-8"
+                >
+                  <div className="w-48 flex-shrink-0 flex items-center justify-center">
+                    <Image
+                      src={logo}
+                      alt={name}
+                      className="max-w-full max-h-32 object-contain"
+                    />
+                  </div>
 
+                  <div className="flex-1 space-y-3 text-gray-600">
+                    <div className="flex items-center mb-2">
+                      <Icons.Company className="h-8 w-8 mr-3 text-pm-dark flex-shrink-0" />
                       <h3 className="text-xl font-semibold text-gray-900">
                         {t(`affiliates.${index}.name`)}
                       </h3>
                     </div>
-                    <div className="space-y-3 text-gray-600 flex-grow">
-                      <div className="flex items-start">
-                        <Icons.MapPin className="h-5 w-5 text-gray-400 mr-2 mt-0.5 flex-shrink-0" />
-                        <div className="flex items-center gap-2">
-                          <span>{t(`affiliates.${index}.address`)}</span>
-                          <a
-                            href={t(`affiliates.${index}.address-link`)}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-blue-600 hover:text-blue-800 transition-colors"
-                          >
-                            <Icons.ExternalLink className="h-4 w-4" />
-                          </a>
-                        </div>
-                      </div>
-                      <div className="flex items-center">
-                        <Icons.Phone className="h-5 w-5 text-gray-400 mr-2" />
-                        <span>{t(`affiliates.${index}.phone`)}</span>
-                      </div>
-                      {i18n.exists(`affiliates.${index}.fax`, { ns: "about" }) && (
-                        <div className="flex items-center">
-                          <Icons.Fax className="h-5 w-5 text-gray-400 mr-2" />
-                          <span>{t(`affiliates.${index}.fax`)}</span>
-                        </div>
-                      )}
-                      <div className="text-sm text-gray-500">
-                        {t(`affiliates.${index}.taxId`)}
+                    <div className="flex items-start">
+                      <Icons.MapPin className="h-5 w-5 text-gray-400 mr-2 mt-0.5 flex-shrink-0" />
+                      <div className="flex items-center gap-2">
+                        <span>{t(`affiliates.${index}.address`)}</span>
+                        <a
+                          href={t(`affiliates.${index}.address-link`)}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-blue-600 hover:text-blue-800 transition-colors"
+                        >
+                          <Icons.ExternalLink className="h-4 w-4" />
+                        </a>
                       </div>
                     </div>
-                  </div>
-                  {/* Photo Container */}
-                  <div className="bg-gray-100 rounded-xl p-6 min-h-[200px] flex items-center justify-center">
-                    <Image
-                      src={logo}
-                      alt={name}
-                      className="max-w-full max-h-full"
-                    />
+                    <div className="flex items-center">
+                      <Icons.Phone className="h-5 w-5 text-gray-400 mr-2" />
+                      <span>{t(`affiliates.${index}.phone`)}</span>
+                    </div>
+                    {i18n.exists(`affiliates.${index}.fax`, { ns: "about" }) && (
+                      <div className="flex items-center">
+                        <Icons.Fax className="h-5 w-5 text-gray-400 mr-2" />
+                        <span>{t(`affiliates.${index}.fax`)}</span>
+                      </div>
+                    )}
+                    <div className="text-sm text-gray-500">
+                      {t(`affiliates.${index}.taxId`)}
+                    </div>
                   </div>
                 </div>
               ))}
