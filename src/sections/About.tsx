@@ -14,7 +14,7 @@ import image2023 from "@/images/about/timeline/2023.jpg";
 import image2025 from "@/images/about/timeline/2025.jpg";
 import winHsingLogo from "@/images/about/affiliates/WIN HSING LOGO.jpg";
 import winMoreLogo from "@/images/about/affiliates/WIN MORE LOGO.jpg";
-import winSingThaiLogo from "@/images/about/affiliates/WIN SING THAI LOGO.jpg";
+import winSingThaiLogo from "@/images/about/affiliates/WIN SING THAI LOGO.png";
 import cx from "classnames";
 
 const CONTACTS = [Icons.Phone, Icons.Fax, Icons.Mail];
