@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import RedirectToJa from "@/sections/winmorejp/RedirectToJa";
 
-const TARGET = "/winmorejp/ja";
+const TARGET = "/winmore-jp/ja";
 
 export const metadata: Metadata = {
   title: "允貿日本株式会社 — Win More Japan",
