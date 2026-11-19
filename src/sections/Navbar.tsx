@@ -81,7 +81,7 @@ const Navbar = () => {
         });
       }, 500);
     },
-    [pathname, i18n],
+    [pathname, router],
   );
 
   return (
