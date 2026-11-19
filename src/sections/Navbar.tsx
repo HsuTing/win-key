@@ -62,7 +62,7 @@ const Navbar = () => {
   }
 
   const [secionOption, setSecionOption] = React.useState<null | string>(null);
-  const timeoutRef = useRef<ReturnType<typeof setTimeout>>();
+  const timeoutRef = useRef<ReturnType<typeof setTimeout>>(undefined);
   const goTo = useCallback(
     (target, disableScroll) => {
       if (pathname !== `/${i18n.language}`) router.push(`/${i18n.language}`);
