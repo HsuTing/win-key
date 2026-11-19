@@ -15,6 +15,7 @@ import image2025 from "@/images/about/timeline/2025.jpg";
 import winHsingLogo from "@/images/about/affiliates/WIN HSING LOGO.jpg";
 import winMoreLogo from "@/images/about/affiliates/WIN MORE LOGO.jpg";
 import winSingThaiLogo from "@/images/about/affiliates/WIN SING THAI LOGO.png";
+import winKeyLogo from "@/images/logo.jpg";
 import cx from "classnames";
 
 const CONTACTS = [Icons.Phone, Icons.Fax, Icons.Mail];
@@ -58,6 +59,10 @@ const AFFILIATED_COMPANIES = [
   {
     name: "允貿日本株式会社",
     logo: winMoreLogo,
+  },
+  {
+    name: "Win Key Global Holdings Co., Ltd.",
+    logo: winKeyLogo,
   },
 ];
 
