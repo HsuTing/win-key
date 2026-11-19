@@ -396,7 +396,7 @@ const Menu = ({ className }: { className?: string }) => {
   );
 };
 
-export default {
+const Icons = {
   Briefcase: React.memo(Briefcase),
   ArrowRight: React.memo(ArrowRight),
   Phone: React.memo(Phone),
@@ -421,3 +421,5 @@ export default {
   Company: React.memo(Company),
   Menu: React.memo(Menu),
 };
+
+export default Icons;

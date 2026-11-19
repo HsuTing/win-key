@@ -34,7 +34,10 @@ const Card = ({
         {imgPlaceholder && !image ? (
           imgPlaceholder
         ) : (
+          // next/image adds no optimization here (images.unoptimized in next.config.js)
+          // eslint-disable-next-line @next/next/no-img-element
           <img
+            alt={title ?? ""}
             className={cx(
               "w-full",
               isImgCovered ? "object-cover" : "object-contain",
