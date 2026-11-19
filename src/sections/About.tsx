@@ -364,24 +364,28 @@ const About = () => {
                         {t(`affiliates.${index}.name`)}
                       </h3>
                     </div>
-                    <div className="flex items-start">
-                      <Icons.MapPin className="h-5 w-5 text-gray-400 mr-2 mt-0.5 flex-shrink-0" />
-                      <div className="flex items-center gap-2">
-                        <span>{t(`affiliates.${index}.address`)}</span>
-                        <a
-                          href={t(`affiliates.${index}.address-link`)}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-blue-600 hover:text-blue-800 transition-colors"
-                        >
-                          <Icons.ExternalLink className="h-4 w-4" />
-                        </a>
+                    {t(`affiliates.${index}.address`) && (
+                      <div className="flex items-start">
+                        <Icons.MapPin className="h-5 w-5 text-gray-400 mr-2 mt-0.5 flex-shrink-0" />
+                        <div className="flex items-center gap-2">
+                          <span>{t(`affiliates.${index}.address`)}</span>
+                          <a
+                            href={t(`affiliates.${index}.address-link`)}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-blue-600 hover:text-blue-800 transition-colors"
+                          >
+                            <Icons.ExternalLink className="h-4 w-4" />
+                          </a>
+                        </div>
                       </div>
-                    </div>
-                    <div className="flex items-center">
-                      <Icons.Phone className="h-5 w-5 text-gray-400 mr-2" />
-                      <span>{t(`affiliates.${index}.phone`)}</span>
-                    </div>
+                    )}
+                    {t(`affiliates.${index}.phone`) && (
+                      <div className="flex items-center">
+                        <Icons.Phone className="h-5 w-5 text-gray-400 mr-2" />
+                        <span>{t(`affiliates.${index}.phone`)}</span>
+                      </div>
+                    )}
                     {i18n.exists(`affiliates.${index}.fax`, { ns: "about" }) && (
                       <div className="flex items-center">
                         <Icons.Fax className="h-5 w-5 text-gray-400 mr-2" />
