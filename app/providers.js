@@ -6,10 +6,37 @@ import { initReactI18next, I18nextProvider } from "react-i18next";
 import locales from "@/locales";
 import { useParams } from "next/navigation";
 
-i18n.use(LanguageDetector).use(initReactI18next).init({
-  resources: locales,
-  fallbackLng: "en",
+const SUPPORTED_LANGUAGES = ["en", "zh-TW", "ja"];
+
+const languageDetector = new LanguageDetector();
+languageDetector.addDetector({
+  name: "pathLang",
+  lookup: () =>
+    typeof window === "undefined"
+      ? undefined
+      : window.location.pathname
+          .split("/")
+          .find((segment) => SUPPORTED_LANGUAGES.includes(segment)),
 });
+
+i18n
+  .use(languageDetector)
+  .use(initReactI18next)
+  .init({
+    resources: locales,
+    fallbackLng: "en",
+    supportedLngs: SUPPORTED_LANGUAGES,
+    detection: {
+      order: [
+        "pathLang",
+        "querystring",
+        "localStorage",
+        "sessionStorage",
+        "navigator",
+        "htmlTag",
+      ],
+    },
+  });
 
 export function Providers({ children }) {
   const params = useParams();
