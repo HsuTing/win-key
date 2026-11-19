@@ -57,7 +57,11 @@ const Navbar = () => {
   ] as const;
 
   function switchLang(lang: (typeof LANGUAGE)[number]["code"]) {
-    history.replaceState(null, "", `/${lang}`);
+    history.replaceState(
+      null,
+      "",
+      window.location.pathname.replace(/[^/]*\/?$/, lang),
+    );
     i18n.changeLanguage(lang);
   }
 
