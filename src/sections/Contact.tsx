@@ -4,7 +4,6 @@ import { useTranslation } from "react-i18next";
 import { Element } from "react-scroll";
 import Banner from "@/components/Banner";
 import Title from "@/components/Title";
-import Card from "@/components/Card";
 import Icons from "@/components/Icons";
 import { sendForm } from "@/utils/form";
 import Input from "@/components/inputs/Input";
