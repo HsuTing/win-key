@@ -2,7 +2,7 @@
   "scripts": {
     "build": "next build",
     "dev": "next dev",
-    "lint": "next lint",
+    "lint": "eslint .",
     "gh-pages": "gh-pages -d out --nojekyll --cname www.win-key.co"
   },
   "dependencies": {
@@ -25,8 +25,8 @@
     "@types/react-scroll": "^1.8.10",
     "@types/react-slick": "^0.23.13",
     "autoprefixer": "^10.4.20",
-    "eslint": "^8",
-    "eslint-config-next": "14.2.12",
+    "eslint": "^9",
+    "eslint-config-next": "16.4.6",
     "gh-pages": "^6.2.0",
     "postcss": "^8.5.28",
     "prettier": "^3.6.2",
