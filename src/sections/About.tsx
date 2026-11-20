@@ -347,9 +347,9 @@ const About = () => {
               {AFFILIATED_COMPANIES.map(({ name, logo }, index) => (
                 <div
                   key={name}
-                  className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow flex items-center gap-8 p-8"
+                  className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow flex flex-col md:flex-row md:items-center gap-6 md:gap-8 p-8"
                 >
-                  <div className="w-48 flex-shrink-0 flex items-center justify-center">
+                  <div className="w-full md:w-48 flex-shrink-0 flex items-center justify-center">
                     <Image
                       src={logo}
                       alt={name}
