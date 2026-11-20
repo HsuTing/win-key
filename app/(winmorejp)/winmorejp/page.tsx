@@ -1,23 +1,32 @@
 import type { Metadata } from "next";
-import RedirectToJa from "@/sections/winmorejp/RedirectToJa";
-
-const TARGET = "/winmorejp/ja";
+import Header from "@/sections/winmorejp/Header";
+import Hero from "@/sections/winmorejp/Hero";
+import Features from "@/sections/winmorejp/Features";
+import Services from "@/sections/winmorejp/Services";
+import Flow from "@/sections/winmorejp/Flow";
+import Company from "@/sections/winmorejp/Company";
+import Contact from "@/sections/winmorejp/Contact";
+import Footer from "@/sections/winmorejp/Footer";
 
 export const metadata: Metadata = {
   title: "允貿日本株式会社 — Win More Japan",
-  robots: { index: false },
-  alternates: { canonical: TARGET },
+  description:
+    "允貿日本株式会社は、台湾で30年以上の実績を持つ「允基企業」の日本公式窓口です。非鉄金属スクラップ・産業廃棄物の回収処理から、高純度金属インゴットの輸出入・安定供給まで対応します。",
 };
 
-// GitHub Pages cannot send a 301, so the short URL redirects on the client.
 export default function Page() {
   return (
-    <>
-      <meta httpEquiv="refresh" content={`0; url=${TARGET}`} />
-      <RedirectToJa to={TARGET} />
-      <p>
-        <a href={TARGET}>允貿日本株式会社のページへ移動します</a>
-      </p>
-    </>
+    <div className="wm">
+      <Header />
+      <main>
+        <Hero />
+        <Features />
+        <Services />
+        <Flow />
+        <Company />
+        <Contact />
+      </main>
+      <Footer />
+    </div>
   );
 }

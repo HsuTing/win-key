@@ -47,7 +47,9 @@ export default function Flow() {
 
         <div className="fl">
           <div className="fl-rail">
-            <span className="fl-tag fl-tag--recycle">RECYCLE ↓</span>
+            <span className="fl-tag fl-tag--recycle">
+              RECYCLE<span className="fl-tag__arrow"> ↓</span>
+            </span>
             <div className="fl-line fl-line--recycle" />
             <div className="fl-box fl-box--recycle">
               <div className="fl-box__title">スクラップ買取り</div>
@@ -60,6 +62,11 @@ export default function Flow() {
           </div>
 
           <div className="fl-center">
+            <div className="fl-box fl-box--recycle fl-box--inline">
+              <div className="fl-box__title">スクラップ買取り</div>
+              <div className="fl-box__desc">工場端材・廃棄物</div>
+            </div>
+            <div className="fl-stem fl-stem--inline" />
             <div className="fl-hq">
               <div className="fl-hq__name">允貿日本株式会社（大阪窓口）</div>
               <div className="fl-hq__sub">台湾・允基企業 日本総代理</div>
@@ -90,14 +97,16 @@ export default function Flow() {
             <div className="fl-output">
               高度選別・溶融・精錬加工 → 高品位インゴット製造
             </div>
+            <div className="fl-stem fl-stem--inline" />
+            <div className="fl-box fl-box--supply fl-box--inline">
+              <div className="fl-box__title">高品位インゴット</div>
+              <div className="fl-box__desc">銅・錫・アルミ・亜鉛</div>
+            </div>
           </div>
 
           <div className="fl-rail">
-            <span className="fl-arrow fl-arrow--supply fl-up" aria-hidden="true">
+            <span className="fl-arrow fl-arrow--supply" aria-hidden="true">
               ▲
-            </span>
-            <span className="fl-arrow fl-arrow--supply fl-dn" aria-hidden="true">
-              ▼
             </span>
             <div className="fl-line fl-line--supply" />
             <div className="fl-box fl-box--supply">
@@ -106,8 +115,7 @@ export default function Flow() {
             </div>
             <div className="fl-line fl-line--supply" />
             <span className="fl-tag fl-tag--supply">
-              <span className="fl-lab-up">SUPPLY ↑</span>
-              <span className="fl-lab-dn">SUPPLY ↓</span>
+              SUPPLY<span className="fl-tag__arrow"> ↑</span>
             </span>
           </div>
         </div>
