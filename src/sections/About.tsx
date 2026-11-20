@@ -392,6 +392,19 @@ const About = () => {
                         <span>{t(`affiliates.${index}.fax`)}</span>
                       </div>
                     )}
+                    {i18n.exists(`affiliates.${index}.website`, {
+                      ns: "about",
+                    }) && (
+                      <div className="flex items-center">
+                        <Icons.Globe className="h-5 w-5 text-gray-400 mr-2" />
+                        <a
+                          href={t(`affiliates.${index}.website`)}
+                          className="text-blue-600 hover:text-blue-800 transition-colors"
+                        >
+                          {`www.win-key.co${t(`affiliates.${index}.website`)}`}
+                        </a>
+                      </div>
+                    )}
                     <div className="text-sm text-gray-500">
                       {t(`affiliates.${index}.taxId`)}
                     </div>

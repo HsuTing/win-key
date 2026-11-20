@@ -70,7 +70,9 @@ const ROWS: { label: string; value: ReactNode; mono?: boolean }[] = [
     value: (
       <List
         items={[
-          "台湾・允基企業有限公司（Win Key Recycle Industrial Corp.）",
+          <a key="win-key" href="/ja">
+            台湾・允基企業有限公司（Win Key Recycle Industrial Corp.）
+          </a>,
           "台湾・允興投資有限公司（Win Hsing Investment Co., Ltd.）",
           "台湾・允貿環保科技有限公司（Win More Environmental Protection Technology Co., Ltd.）",
           "タイ・Win Sing（Thailand）Co., Ltd.",
