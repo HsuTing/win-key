@@ -140,7 +140,7 @@ export default function Contact() {
               />
               <span>
                 <a
-                  href="https://www.win-key.co/privacyPolicy/ja.pdf"
+                  href="https://drive.google.com/file/d/1BWyK03Hbiun1Equ6qBuYseV-uAKUp8pL/view?usp=drivesdk"
                   target="_blank"
                   rel="noopener noreferrer"
                 >

@@ -80,7 +80,10 @@ const Contact = () => {
 
             {i18n.language === "ja" ? (
               <>
-                <a href={`/privacyPolicy/${i18n.language}.pdf`} target="_blank">
+                <a
+                  href="https://drive.google.com/file/d/1BWyK03Hbiun1Equ6qBuYseV-uAKUp8pL/view?usp=drivesdk"
+                  target="_blank"
+                >
                   {t("agreePolicy.0")}
                 </a>
 
