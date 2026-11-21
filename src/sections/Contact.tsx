@@ -81,7 +81,7 @@ const Contact = () => {
             {i18n.language === "ja" ? (
               <>
                 <a
-                  href="https://drive.google.com/file/d/1BWyK03Hbiun1Equ6qBuYseV-uAKUp8pL/view?usp=drivesdk"
+                  href="https://drive.google.com/file/d/1IcMl2X8V70OSAfM796s52pkesFCW_cyn/view?usp=drive_link"
                   target="_blank"
                 >
                   {t("agreePolicy.0")}
